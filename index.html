@@ -100,15 +100,15 @@
             </div>
             <menu class="home__menu">
               <ul class="home__list">
-                <li class="home__item home__item1"><p>Главная</p></li>
+                <li class="home__item home__item1 animated-text"><p>Главная</p></li>
                 <li class="home__item"><p>/</p></li>
-                <li class="home__item home__item2"><p>О нас</p></li>
+                <li class="home__item home__item2 animated-text"><p>О нас</p></li>
                 <li class="home__item"><p>/</p></li>
-                <li class="home__item home__item3"><p>Проекты</p></li>
+                <li class="home__item home__item3 animated-text"><p>Проекты</p></li>
                 <li class="home__item"><p>/</p></li>
-                <li class="home__item home__item4"><p>Услуги</p></li>
+                <li class="home__item home__item4 animated-text"><p>Услуги</p></li>
                 <li class="home__item"><p>/</p></li>
-                <li class="home__item home__item5"><p>Контакты</p></li>
+                <li class="home__item home__item5 animated-text"><p>Контакты</p></li>
               </ul>
             </menu>
           </div>
@@ -121,27 +121,29 @@
             </div>
             <div class="portfolio__content">
               <div class="portfolio__cards">
-                <div class="portfolio__card">
-                  <p class="portfolio__overhead">FullStack</p>
-                  <h3 class="portfolio__card-title">TeaToDo</h3>
-                  <p class="portfolio__text">
-                    TeaToDo - это веб-приложение, в котором вы можете создавать свои группы вкладок,
-                    с различными задачами, мысляли, расписанными задачами, а также цитатами. В
-                    TeaToDo вы можете распределить все свои задачи, пометить их, а также приукрасить
-                    сами группы с задачами, для вашего удобства.
-                  </p>
-                  <div class="portfolio__btn">
-                    <p class="portfolio__btn-text">Посмотреть проект</p>
-                    <div class="portfolio__btn-img">
-                      <img src="images/projects/arrow.svg" alt="arrow" />
+                <div class="portfolio__card-wrapper">
+                  <div class="portfolio__card">
+                    <p class="portfolio__overhead">FullStack</p>
+                    <h3 class="portfolio__card-title">TeaToDo</h3>
+                    <p class="portfolio__text">
+                      TeaToDo - это веб-приложение, в котором вы можете создавать свои группы
+                      вкладок, с различными задачами, мысляли, расписанными задачами, а также
+                      цитатами. В TeaToDo вы можете распределить все свои задачи, пометить их, а
+                      также приукрасить сами группы с задачами, для вашего удобства.
+                    </p>
+                    <div class="portfolio__btn">
+                      <p class="portfolio__btn-text">Посмотреть проект</p>
+                      <div class="portfolio__btn-img">
+                        <img src="images/projects/arrow.svg" alt="arrow" />
+                      </div>
                     </div>
-                  </div>
-                  <div class="portfolio__card-decor">
-                    <div class="portfolio__card-decor1">
-                      <img src="images/projects/card-upper-decor.svg" alt="decor" />
-                    </div>
-                    <div class="portfolio__card-decor2">
-                      <img src="images/projects/card-lower-decor.svg" alt="decor" />
+                    <div class="portfolio__card-decor">
+                      <div class="portfolio__card-decor1">
+                        <img src="images/projects/card-upper-decor.svg" alt="decor" />
+                      </div>
+                      <div class="portfolio__card-decor2">
+                        <img src="images/projects/card-lower-decor.svg" alt="decor" />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -191,11 +193,39 @@
                     </div>
                   </div>
                 </div>
+                <div class="portfolio__card-left">
+                  <p class="portfolio__overhead portfolio__text-black">???</p>
+                  <h3 class="portfolio__card-title portfolio__text-black">Ваш проект</h3>
+                  <p class="portfolio__text portfolio__text-black">
+                    Работаем с разными типами задач от обычных лендингов до многостраничников и
+                    веб-приложений. <br />
+                    С нами вы получите качественный продающий продукт для вашего бизнеса.
+                  </p>
+                  <div class="portfolio__btn portfolio__btn-black">
+                    <p class="portfolio__btn-text portfolio__text-white">Написать нам</p>
+                    <div class="portfolio__btn-img">
+                      <img src="images/projects/arrow-white.svg" alt="arrow" />
+                    </div>
+                  </div>
+                  <div class="portfolio__card-decor">
+                    <div class="portfolio__card-decor1-black">
+                      <img src="images/projects/card-upper-decor-black.svg" alt="decor" />
+                    </div>
+                    <div class="portfolio__card-decor2-black">
+                      <img src="images/projects/card-lower-decor-black.svg" alt="decor" />
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio__scene" data-delay="500">
+                  <div class="viewer" id="three-js-container"></div>
+                </div>
               </div>
             </div>
           </div>
         </section>
         <section class="contacts">
+          <div id="three-js-container" class="contacts__scene"></div>
+
           <div class="contacts__container _container">
             <div class="contacts__title-wrapper">
               <div class="contacts__title-decor"></div>
@@ -213,7 +243,7 @@
                     <div class="contacts__column">
                       <div class="contacts__item">
                         <div class="contacts__item-icon">
-                          <img src="images/contacts/template.svg" alt="telegram" />
+                          <img src="images/contacts/telegram.svg" alt="telegram" />
                         </div>
                         <div class="contacts__item-content">
                           <p class="contacts__item-title">Телеграм</p>
@@ -222,7 +252,19 @@
                       </div>
                       <div class="contacts__item">
                         <div class="contacts__item-icon">
-                          <img src="images/contacts/template.svg" alt="telegram channel" />
+                          <svg
+                            width="25"
+                            height="25"
+                            viewBox="0 0 409 433"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M372.501 8.33398C391.501 8.33398 405.834 25.0007 398.168 56.0007L305.168 494.334C298.668 525.501 279.834 533.001 253.834 518.501L32.0012 354.667C31.1409 354.05 30.44 353.237 29.9565 352.295C29.4731 351.353 29.2209 350.309 29.2209 349.251C29.2209 348.192 29.4731 347.148 29.9565 346.206C30.44 345.264 31.1409 344.451 32.0012 343.834L288.168 112.501C299.834 102.167 285.668 97.1673 270.334 106.501L-51.1655 309.334C-52.1405 309.97 -53.2476 310.375 -54.4027 310.52C-55.5578 310.664 -56.7306 310.544 -57.8322 310.167L-194.332 267.001C-224.666 258.167 -224.666 237.334 -187.499 222.501L358.668 11.834C362.999 9.756 367.703 8.56596 372.501 8.33398Z"
+                              stroke="black"
+                              stroke-width="16.6667"
+                              stroke-linecap="round"
+                              stroke-linejoin="round" />
+                          </svg>
                         </div>
                         <div class="contacts__item-content">
                           <p class="contacts__item-title">Телеграм канал</p>
@@ -233,7 +275,7 @@
                     <div class="contacts__column">
                       <div class="contacts__item">
                         <div class="contacts__item-icon">
-                          <img src="images/contacts/template.svg" alt="phone" />
+                          <img src="images/contacts/telephone.svg" alt="phone" />
                         </div>
                         <div class="contacts__item-content">
                           <p class="contacts__item-title">Номер</p>
@@ -242,7 +284,7 @@
                       </div>
                       <div class="contacts__item">
                         <div class="contacts__item-icon">
-                          <img src="images/contacts/template.svg" alt="mail" />
+                          <img src="images/contacts/email.svg" alt="mail" />
                         </div>
                         <div class="contacts__item-content">
                           <p class="contacts__item-title">Почта</p>
@@ -255,7 +297,16 @@
                 <div class="contacts__message-button-wrapper">
                   <div class="contacts__message-button">
                     <div class="contacts__message-button-img">
-                      <img src="images/contacts/telegram-icon.svg" alt="telegram" />
+                      <svg
+                        width="25"
+                        height="18"
+                        viewBox="0 0 25 18"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M23.2143 0H1.78571C1.31211 0 0.85791 0.189642 0.523024 0.527208C0.188137 0.864773 0 1.32261 0 1.8V16.2C0 16.6774 0.188137 17.1352 0.523024 17.4728C0.85791 17.8104 1.31211 18 1.78571 18H23.2143C23.6879 18 24.1421 17.8104 24.477 17.4728C24.8119 17.1352 25 16.6774 25 16.2V1.8C25 1.32261 24.8119 0.864773 24.477 0.527208C24.1421 0.189642 23.6879 0 23.2143 0ZM21.25 1.8L12.5 7.902L3.75 1.8H21.25ZM1.78571 16.2V2.619L11.9911 9.738C12.1405 9.84251 12.3181 9.89852 12.5 9.89852C12.6819 9.89852 12.8595 9.84251 13.0089 9.738L23.2143 2.619V16.2H1.78571Z"
+                          fill="black" />
+                      </svg>
                     </div>
                     <p class="contacts__message-button-text">Написать в телеграм</p>
                   </div>
@@ -410,9 +461,11 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
 
     <script src="js/textAnimations.js"></script>
     <script src="js/parallax.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/polyhedron.js"></script>
   </body>
 </html>

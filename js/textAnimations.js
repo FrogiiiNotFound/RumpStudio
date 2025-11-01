@@ -70,11 +70,9 @@ function initTextAnimations() {
     const animation = animations[animationType];
 
     const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: element,
-        start: 'top 80%',
-        end: 'bottom 20%',
-        toggleActions: 'play none none none',
+      paused: true,
+      onComplete: function () {
+        this.scrollTrigger.disable();
       },
     });
 
@@ -91,7 +89,31 @@ function initTextAnimations() {
         ease: 'back.out(1.7)',
       },
     );
+
+    const scrollTrigger = ScrollTrigger.create({
+      trigger: element,
+      start: 'top 80%',
+      end: 'bottom 20%',
+      onEnter: () => tl.play(),
+      onEnterBack: () => tl.play(),
+      toggleActions: 'play none none none',
+    });
+
+    const rect = element.getBoundingClientRect();
+    const isInViewport =
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth);
+
+    if (isInViewport && !tl.isActive()) {
+      tl.play();
+    }
   });
 }
 
 document.addEventListener('DOMContentLoaded', initTextAnimations);
+
+window.addEventListener('load', function () {
+  ScrollTrigger.refresh();
+});

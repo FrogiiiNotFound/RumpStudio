@@ -83,6 +83,11 @@
     padding: 17.5px 0px;
     text-align: center;
     margin: 0px auto;
+    transition: all 0.1s linear;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   &__btn-text {
@@ -128,5 +133,16 @@
     position: absolute;
     bottom: -1px;
     right: -1px;
+  }
+
+  &__cards {
+    position: relative;
+  }
+
+  &__scene {
+    position: absolute;
+    top: -250px;
+    right: -150px;
+    z-index: -100;
   }
 }
