@@ -1,9 +1,6 @@
 .portfolio {
   padding: 100px 0px;
 
-  &__container {
-  }
-
   &__title-wrapper {
     display: flex;
     align-items: center;
@@ -22,12 +19,6 @@
     font-weight: 800;
     font-size: 48px;
     color: #171717;
-  }
-
-  &__content {
-  }
-
-  &__cards {
   }
 
   &__card {
@@ -94,9 +85,6 @@
     font-weight: 500;
     font-size: 16px;
     color: #171717;
-  }
-
-  &__btn-img {
   }
 
   &__text-black {
