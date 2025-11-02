@@ -716,6 +716,7 @@ a {
   margin-bottom: 7px;
 }
 .footer__contact-body {
+  display: inline-block;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -727,6 +728,15 @@ a {
 }
 .footer__contact-body:hover {
   color: #7c7c7c;
+}
+.footer__contact-body:hover .footer__contact-icon {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  rotate: 10deg;
+}
+.footer__contact-icon {
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
 }
 .footer__lower-container {
   padding: 15px 0px 15px;
