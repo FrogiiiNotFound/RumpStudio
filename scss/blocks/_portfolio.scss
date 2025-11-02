@@ -19,7 +19,7 @@
   }
 
   &__title-text {
-    font-weight: 600;
+    font-weight: 800;
     font-size: 48px;
     color: #171717;
   }
@@ -145,4 +145,8 @@
     right: -150px;
     z-index: -100;
   }
+}
+
+.test {
+  color: aqua;
 }

@@ -793,7 +793,7 @@ a {
   background-color: #171717;
 }
 .portfolio__title-text {
-  font-weight: 600;
+  font-weight: 800;
   font-size: 48px;
   color: #171717;
 }
@@ -897,4 +897,8 @@ a {
   top: -250px;
   right: -150px;
   z-index: -100;
+}
+
+.test {
+  color: aqua;
 }
