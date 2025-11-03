@@ -907,6 +907,8 @@ a {
   top: -250px;
   right: -150px;
   z-index: -100;
+  -webkit-animation: slide 2s ease-in-out 0.5s 3 normal;
+          animation: slide 2s ease-in-out 0.5s 3 normal;
 }
 
 .test {
@@ -1101,4 +1103,40 @@ a {
 }
 .item-service-white::after {
   background: url("../images/services/decor-black-small.png") 0 0 no-repeat;
+@-webkit-keyframes slide {
+  0% {
+    top: -250px;
+    right: -150px;
+  }
+  33% {
+    top: 200px;
+    right: 540px;
+  }
+  66% {
+    top: 610px;
+    right: -150px;
+  }
+  100% {
+    top: 1030px;
+    right: 540px;
+  }
+}
+
+@keyframes slide {
+  0% {
+    top: -250px;
+    right: -150px;
+  }
+  33% {
+    top: 200px;
+    right: 540px;
+  }
+  66% {
+    top: 610px;
+    right: -150px;
+  }
+  100% {
+    top: 1030px;
+    right: 540px;
+  }
 }

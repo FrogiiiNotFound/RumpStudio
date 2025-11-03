@@ -132,9 +132,47 @@
     top: -250px;
     right: -150px;
     z-index: -100;
+    animation: slide 2s ease-in-out 0.5s 3 normal;
   }
+  // &__scene {
+  //   position: absolute;
+  //   top: 200px;
+  //   right: 540px;
+  //   z-index: -100;
+  // }
+  // &__scene {
+  //   position: absolute;
+  //   top: 610px;
+  //   right: -150px;
+  //   z-index: -100;
+  // }
+  //   &__scene {
+  //   position: absolute;
+  //   top: 1030px;
+  //   right: 540px;
+  //   z-index: -100;
+  // }
 }
 
 .test {
   color: aqua;
+}
+
+@keyframes slide {
+  0% {
+    top: -250px;
+    right: -150px;
+  }
+  33% {
+    top: 200px;
+    right: 540px;
+  }
+  66% {
+    top: 610px;
+    right: -150px;
+  }
+  100% {
+    top: 1030px;
+    right: 540px;
+  }
 }
