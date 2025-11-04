@@ -100,12 +100,26 @@ a {
       -ms-flex-pack: end;
           justify-content: end;
 }
+.header__icon path {
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
 .header__contact {
   cursor: pointer;
-  padding: 13px 12px 10px 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border: 1.5px solid #171717;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
+  width: 52px;
+  height: 52px;
 }
 .header__contact:hover {
   background: #171717;
@@ -165,6 +179,8 @@ a {
   border-radius: 50%;
   background-color: #171717;
   z-index: -1;
+  -webkit-animation: pulse 10s linear infinite;
+          animation: pulse 10s linear infinite;
 }
 .home__circle-2 {
   position: absolute;
@@ -175,6 +191,8 @@ a {
   border-radius: 50%;
   background-color: #171717;
   z-index: -1;
+  -webkit-animation: pulse 10s linear 0.4s infinite;
+          animation: pulse 10s linear 0.4s infinite;
 }
 .home__circle-3 {
   position: absolute;
@@ -185,6 +203,8 @@ a {
   border-radius: 50%;
   background-color: #171717;
   z-index: -1;
+  -webkit-animation: pulse 10s linear 0.2s infinite;
+          animation: pulse 10s linear 0.2s infinite;
 }
 .home__button {
   cursor: pointer;
@@ -301,10 +321,19 @@ a {
   font-size: 20px;
   line-height: 99%;
   letter-spacing: 0.01em;
-  color: #000 !important;
+  color: #171717 !important;
 }
-.home__item:hover {
-  border-bottom: 3px solid #171717;
+.home__link::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 3px;
+  background-color: #171717;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.home__link:hover::after {
+  width: 100%;
 }
 
 .header,
@@ -317,6 +346,35 @@ a {
   pointer-events: auto;
 }
 
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(100%);
+            transform: scale(100%);
+  }
+  40% {
+    -webkit-transform: scale(110%);
+            transform: scale(110%);
+  }
+  100% {
+    -webkit-transform: scale(100%);
+            transform: scale(100%);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(100%);
+            transform: scale(100%);
+  }
+  40% {
+    -webkit-transform: scale(110%);
+            transform: scale(110%);
+  }
+  100% {
+    -webkit-transform: scale(100%);
+            transform: scale(100%);
+  }
+}
 .contacts {
   position: relative;
   padding: 0px 0px 170px 0px;
@@ -915,6 +973,43 @@ a {
   color: aqua;
 }
 
+@-webkit-keyframes slide {
+  0% {
+    top: -250px;
+    right: -150px;
+  }
+  33% {
+    top: 200px;
+    right: 540px;
+  }
+  66% {
+    top: 610px;
+    right: -150px;
+  }
+  100% {
+    top: 1030px;
+    right: 540px;
+  }
+}
+
+@keyframes slide {
+  0% {
+    top: -250px;
+    right: -150px;
+  }
+  33% {
+    top: 200px;
+    right: 540px;
+  }
+  66% {
+    top: 610px;
+    right: -150px;
+  }
+  100% {
+    top: 1030px;
+    right: 540px;
+  }
+}
 .services {
   padding: 50px 0px;
 }
@@ -1103,40 +1198,4 @@ a {
 }
 .item-service-white::after {
   background: url("../images/services/decor-black-small.png") 0 0 no-repeat;
-@-webkit-keyframes slide {
-  0% {
-    top: -250px;
-    right: -150px;
-  }
-  33% {
-    top: 200px;
-    right: 540px;
-  }
-  66% {
-    top: 610px;
-    right: -150px;
-  }
-  100% {
-    top: 1030px;
-    right: 540px;
-  }
-}
-
-@keyframes slide {
-  0% {
-    top: -250px;
-    right: -150px;
-  }
-  33% {
-    top: 200px;
-    right: 540px;
-  }
-  66% {
-    top: 610px;
-    right: -150px;
-  }
-  100% {
-    top: 1030px;
-    right: 540px;
-  }
 }

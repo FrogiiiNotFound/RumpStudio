@@ -1,29 +1,37 @@
 .header {
-  padding: 30px 0px;
+    padding: 30px 0px;
 
-  &__contacts {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    justify-content: end;
-  }
-
-  &__contact {
-    cursor: pointer;
-    padding: 13px 12px 10px 12px;
-    border: 1.5px solid #171717;
-    transition: all 0.2s linear;
-
-    &:hover {
-      background: #171717;
-
-      .header__icon path {
-        fill: white;
-      }
-
-      .header__icon-addition {
-        fill: black !important;
-      }
+    &__contacts {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        justify-content: end;
     }
-  }
+
+    &__icon path {
+      transition: all .2s linear;
+    }
+
+    &__contact {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1.5px solid #171717;
+        transition: all 0.2s linear;
+        width: 52px;
+        height: 52px;
+
+        &:hover {
+            background: #171717;
+
+            .header__icon path {
+                fill: white;
+            }
+
+            .header__icon-addition {
+                fill: black !important;
+            }
+        }
+    }
 }
