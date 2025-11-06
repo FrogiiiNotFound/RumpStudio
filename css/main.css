@@ -880,6 +880,10 @@ a {
   padding: 36px 67px 27px 40px;
   margin: 0px 0px 0px auto;
 }
+.portfolio__card-left:hover {
+  backdrop-filter: blur(100px);
+  background: url("../../images/projects/project2.png") 0 0/cover no-repeat;
+}
 .portfolio__overhead {
   font-weight: 400;
   font-size: 24px;
@@ -901,6 +905,7 @@ a {
 .portfolio__btn {
   cursor: pointer;
   max-width: 382px;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -916,12 +921,38 @@ a {
   padding: 17.5px 0px;
   text-align: center;
   margin: 0px auto;
-  -webkit-transition: all 0.1s linear;
-  transition: all 0.1s linear;
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  overflow: hidden;
+}
+.portfolio__btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(rgba(0, 0, 0, 0.25)), color-stop(rgba(0, 0, 0, 0.4)), color-stop(rgba(0, 0, 0, 0.25)), to(transparent));
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.25), transparent);
+  -webkit-transition: left 0.7s ease;
+  transition: left 0.7s ease;
 }
 .portfolio__btn:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: translateY(-8px) scale(1.02);
+          transform: translateY(-8px) scale(1.02);
+  -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.2), 0 0 25px rgba(255, 255, 255, 0.4);
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.2), 0 0 25px rgba(255, 255, 255, 0.4);
+}
+.portfolio__btn:hover::before {
+  left: 100%;
+  -webkit-transition: left 0.7s ease;
+  transition: left 0.7s ease;
+}
+.portfolio__btn:active {
+  -webkit-transform: translateY(-2px) scale(1.01);
+          transform: translateY(-2px) scale(1.01);
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
 }
 .portfolio__btn-text {
   font-weight: 500;
@@ -934,25 +965,78 @@ a {
 .portfolio__btn-black {
   background-color: #171717;
 }
+.portfolio__btn-black::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(rgba(255, 255, 255, 0.4)), color-stop(rgba(255, 255, 255, 0.8)), to(transparent));
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.8), transparent);
+  -webkit-transition: left 0.7s ease;
+  transition: left 0.7s ease;
+}
+.portfolio__btn-black:hover {
+  -webkit-transform: translateY(-8px) scale(1.02);
+          transform: translateY(-8px) scale(1.02);
+  -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.2), 0 0 25px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.2), 0 0 25px rgba(0, 0, 0, 0.4);
+}
+.portfolio__btn-black:hover::before {
+  left: 100%;
+  -webkit-transition: left 0.7s ease;
+  transition: left 0.7s ease;
+}
+.portfolio__btn-black:active {
+  -webkit-transform: translateY(-2px) scale(1.01);
+          transform: translateY(-2px) scale(1.01);
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+}
 .portfolio__text-white {
   color: white;
 }
 .portfolio__card-decor1 {
+  pointer-events: none;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   position: absolute;
   top: -40px;
   right: -40px;
 }
 .portfolio__card-decor2 {
+  pointer-events: none;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   position: absolute;
   bottom: -40px;
   left: -40px;
 }
 .portfolio__card-decor1-black {
+  pointer-events: none;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   position: absolute;
   top: 0px;
   left: 0px;
 }
 .portfolio__card-decor2-black {
+  pointer-events: none;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   position: absolute;
   bottom: -1px;
   right: -1px;
@@ -973,43 +1057,6 @@ a {
   color: aqua;
 }
 
-@-webkit-keyframes slide {
-  0% {
-    top: -250px;
-    right: -150px;
-  }
-  33% {
-    top: 200px;
-    right: 540px;
-  }
-  66% {
-    top: 610px;
-    right: -150px;
-  }
-  100% {
-    top: 1030px;
-    right: 540px;
-  }
-}
-
-@keyframes slide {
-  0% {
-    top: -250px;
-    right: -150px;
-  }
-  33% {
-    top: 200px;
-    right: 540px;
-  }
-  66% {
-    top: 610px;
-    right: -150px;
-  }
-  100% {
-    top: 1030px;
-    right: 540px;
-  }
-}
 .scene-active1 {
   top: -250px;
   right: -150px;
