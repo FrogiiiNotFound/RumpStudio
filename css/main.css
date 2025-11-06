@@ -2,6 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Kalnia:100,200,300,regular,500,600,700);
 @import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,800,800italic,900,900italic);
 @import url(https://fonts.googleapis.com/css?family=Kay+Pho+Du:regular,500,600,700);
+
 * {
   margin: 0;
   padding: 0;
@@ -163,12 +164,17 @@ a {
 }
 .home__title-gif {
   position: absolute;
-  bottom: 40px;
+  bottom: 30px;
   right: 120px;
   -webkit-transition: -webkit-transform 0.6s ease;
   transition: -webkit-transform 0.6s ease;
   transition: transform 0.6s ease;
   transition: transform 0.6s ease, -webkit-transform 0.6s ease;
+  width: 120px;
+  height: 120px;
+}
+.home__title-gif img {
+  width: 100%;
 }
 .home__circle-1 {
   position: absolute;
@@ -396,7 +402,6 @@ a {
   background-color: #171717;
 }
 .contacts__title {
-  font-family: "Kay Pho Du", serif;
   font-weight: 600;
   font-size: 48px;
   color: #171717;
@@ -406,9 +411,9 @@ a {
   display: -ms-flexbox;
   display: flex;
   gap: 106px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 .contacts__message {
   max-width: 745px;
@@ -430,7 +435,8 @@ a {
   font-weight: 400;
   font-size: 20px;
   color: #171717;
-  margin-bottom: 54px;
+  margin-bottom: 34px;
+  max-width: 516px;
 }
 .contacts__info-title {
   font-weight: 400;
@@ -459,14 +465,39 @@ a {
   margin-bottom: 31px;
 }
 .contacts__item:hover .contacts__item-icon {
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
   background-color: #171717;
+}
+.contacts__item:hover .contacts__item-icon path {
+  fill: #fff;
+}
+.contacts__item:hover .contacts__item-icon.icon-phone path {
+  fill: #171717;
+  stroke: #fff;
 }
 .contacts__item-icon {
   border: 1px solid black;
-  padding: 11px 11px;
+  width: 45px;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5px;
 }
-.contacts__item-icon img {
+.contacts__item-icon svg {
   width: 25px;
+  height: 25px;
+}
+.contacts__item-icon svg path {
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 .contacts__item-title {
   font-weight: 500;
@@ -496,18 +527,53 @@ a {
   border-radius: 5px;
   padding: 8px 16px;
   background: #171717;
+  position: relative;
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  overflow: hidden;
+}
+.contacts__message-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(rgba(0, 0, 0, 0.25)), color-stop(rgba(0, 0, 0, 0.4)), color-stop(rgba(0, 0, 0, 0.25)), to(transparent));
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.25), transparent);
+  -webkit-transition: left 0.7s ease;
+  transition: left 0.7s ease;
 }
 .contacts__message-button:hover {
-  -webkit-box-shadow: 0 6px 26px -5px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 6px 26px -5px rgba(0, 0, 0, 0.4);
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: translateY(-8px) scale(1.02);
+          transform: translateY(-8px) scale(1.02);
+  -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.2), 0 0 25px rgba(255, 255, 255, 0.4);
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.2), 0 0 25px rgba(255, 255, 255, 0.4);
+}
+.contacts__message-button:hover::before {
+  left: 100%;
+  -webkit-transition: left 0.7s ease;
+  transition: left 0.7s ease;
+}
+.contacts__message-button:active {
+  -webkit-transform: translateY(-2px) scale(1.01);
+          transform: translateY(-2px) scale(1.01);
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
 }
 .contacts__message-button-text {
   font-weight: 500;
   font-size: 14px;
   line-height: 171%;
   color: #f4f4f4;
+}
+.contacts__message-button-img {
+  width: 25px;
+  height: 25px;
+}
+.contacts__message-button-img svg {
+  width: 25px;
+  height: 25px;
 }
 .contacts__form {
   min-width: 498px;
@@ -576,7 +642,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-bottom: 18px;
+  margin-bottom: 48px;
 }
 .contacts__textarea {
   min-height: 205px;
@@ -612,12 +678,40 @@ a {
   background: #171717;
   -webkit-transition: all 0.1s linear;
   transition: all 0.1s linear;
+  margin-top: auto;
+  position: relative;
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  overflow: hidden;
+}
+.contacts__form-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(rgba(0, 0, 0, 0.25)), color-stop(rgba(0, 0, 0, 0.4)), color-stop(rgba(0, 0, 0, 0.25)), to(transparent));
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.25), transparent);
+  -webkit-transition: left 0.7s ease;
+  transition: left 0.7s ease;
 }
 .contacts__form-button:hover {
-  -webkit-box-shadow: 0 6px 26px -5px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 6px 26px -5px rgba(0, 0, 0, 0.4);
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: translateY(-8px) scale(1.02);
+          transform: translateY(-8px) scale(1.02);
+  -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.2), 0 0 25px rgba(255, 255, 255, 0.4);
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.2), 0 0 25px rgba(255, 255, 255, 0.4);
+}
+.contacts__form-button:hover::before {
+  left: 100%;
+  -webkit-transition: left 0.7s ease;
+  transition: left 0.7s ease;
+}
+.contacts__form-button:active {
+  -webkit-transform: translateY(-2px) scale(1.01);
+          transform: translateY(-2px) scale(1.01);
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
 }
 .contacts__form-button-text {
   font-weight: 500;
