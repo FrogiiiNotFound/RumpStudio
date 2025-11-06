@@ -27,9 +27,15 @@
 
     &__title-gif {
         position: absolute;
-        bottom: 40px;
+        bottom: 30px;
         right: 120px;
         transition: transform 0.6s ease;
+        width: 120px;
+        height: 120px;
+
+        img {
+            width: 100%;
+        }
     }
 
     &__circle-1 {
