@@ -2,7 +2,6 @@
 @import url(https://fonts.googleapis.com/css?family=Kalnia:100,200,300,regular,500,600,700);
 @import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,800,800italic,900,900italic);
 @import url(https://fonts.googleapis.com/css?family=Kay+Pho+Du:regular,500,600,700);
-
 * {
   margin: 0;
   padding: 0;
@@ -132,6 +131,12 @@ a {
   fill: black !important;
 }
 
+@media (max-width: 528px) {
+  .header__contact {
+    width: 42px;
+    height: 42px;
+  }
+}
 .home {
   position: relative;
   padding: 150px 0px 100px;
@@ -184,7 +189,7 @@ a {
   height: 402px;
   border-radius: 50%;
   background-color: #171717;
-  z-index: -1;
+  z-index: -1000;
   -webkit-animation: pulse 10s linear infinite;
           animation: pulse 10s linear infinite;
 }
@@ -196,7 +201,7 @@ a {
   height: 245px;
   border-radius: 50%;
   background-color: #171717;
-  z-index: -1;
+  z-index: -1000;
   -webkit-animation: pulse 10s linear 0.4s infinite;
           animation: pulse 10s linear 0.4s infinite;
 }
@@ -208,7 +213,7 @@ a {
   height: 309px;
   border-radius: 50%;
   background-color: #171717;
-  z-index: -1;
+  z-index: -1000;
   -webkit-animation: pulse 10s linear 0.2s infinite;
           animation: pulse 10s linear 0.2s infinite;
 }
@@ -221,6 +226,7 @@ a {
   transition: background-color 0.2s linear, -webkit-transform 0.2s ease;
   transition: transform 0.2s ease, background-color 0.2s linear;
   transition: transform 0.2s ease, background-color 0.2s linear, -webkit-transform 0.2s ease;
+  color: #000;
 }
 .home__button:hover {
   background-color: #171717;
@@ -239,7 +245,6 @@ a {
   font-size: 18px;
   line-height: 99%;
   letter-spacing: 0.01em;
-  color: #000;
   -webkit-transition: color 0.2s linear;
   transition: color 0.2s linear;
 }
@@ -379,6 +384,146 @@ a {
   100% {
     -webkit-transform: scale(100%);
             transform: scale(100%);
+  }
+}
+/* ============================================================================== */
+@media (max-width: 1250px) {
+  .home {
+    padding: 10px 0px 100px;
+  }
+  .home__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 100px;
+  }
+  .home__title {
+    text-align: center;
+  }
+  .home__title-gif {
+    bottom: 30px;
+    right: 0px;
+  }
+  .home__button {
+    margin: 0px auto;
+    text-align: center;
+    border-color: white;
+    color: white;
+  }
+  .home__button:hover {
+    background-color: #ffffff;
+    -webkit-transform: scale(1.08);
+            transform: scale(1.08);
+  }
+  .home__button:hover .home__button-text {
+    color: rgb(0, 0, 0);
+  }
+  .home__texts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .home__circle-1 {
+    display: none;
+  }
+  .home__images {
+    margin-left: 70px;
+    margin-top: 70px;
+  }
+}
+@media (max-width: 768px) {
+  .home__title {
+    font-size: 80px;
+  }
+  .home__circle-2 {
+    top: -150px;
+    left: -100px;
+  }
+  .home__circle-3 {
+    top: 220px;
+    right: 95px;
+  }
+  .home__images {
+    margin-left: 80px;
+  }
+  .home__main-image img {
+    width: 439px;
+  }
+  .home__frame-1 img {
+    width: 279px;
+  }
+  .home__frame-2 img {
+    width: 279px;
+  }
+  .home__bg img {
+    width: 356px;
+  }
+  .home__sparkles img {
+    margin-left: 100px;
+    width: 70px;
+  }
+  .home__item {
+    font-size: 18px;
+  }
+}
+@media (max-width: 528px) {
+  .home__title {
+    font-size: 55px;
+  }
+  .home__contact {
+    width: 42px;
+    height: 42px;
+  }
+  .home__circle-2 {
+    top: -150px;
+    width: 209px;
+    height: 209px;
+  }
+  .home__circle-3 {
+    top: 150px;
+    right: 40px;
+    width: 209px;
+    height: 209px;
+  }
+  .home__title-gif {
+    bottom: -25px;
+    right: -60px;
+  }
+  .home__title-gif img {
+    width: 70px;
+  }
+  .home__images {
+    margin-left: 90px;
+  }
+  .home__main-image img {
+    width: 339px;
+  }
+  .home__frame-1 img {
+    width: 179px;
+  }
+  .home__frame-2 img {
+    width: 179px;
+  }
+  .home__bg img {
+    width: 256px;
+  }
+  .home__sparkles img {
+    margin-left: 100px;
+    width: 60px;
+  }
+  .home__content {
+    gap: 170px;
+  }
+  .home__item {
+    font-size: 14px;
   }
 }
 .contacts {

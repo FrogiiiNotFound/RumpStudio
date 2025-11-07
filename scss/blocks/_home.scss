@@ -46,7 +46,7 @@
         height: 402px;
         border-radius: 50%;
         background-color: #171717;
-        z-index: -1;
+        z-index: -1000;
         animation: pulse 10s linear infinite;
     }
 
@@ -58,7 +58,7 @@
         height: 245px;
         border-radius: 50%;
         background-color: #171717;
-        z-index: -1;
+        z-index: -1000;
         animation: pulse 10s linear 0.4s infinite;
     }
 
@@ -70,7 +70,7 @@
         height: 309px;
         border-radius: 50%;
         background-color: #171717;
-        z-index: -1;
+        z-index: -1000;
         animation: pulse 10s linear 0.2s infinite;
     }
 
@@ -80,6 +80,7 @@
         border: 2px solid #171717;
         padding: 14px 23px;
         transition: transform 0.2s ease, background-color 0.2s linear;
+        color: #000;
 
         &:hover {
             background-color: #171717;
@@ -100,7 +101,6 @@
         font-size: 18px;
         line-height: 99%;
         letter-spacing: 0.01em;
-        color: #000;
         transition: color 0.2s linear;
     }
 
@@ -208,5 +208,175 @@
     }
     100% {
         transform: scale(100%);
+    }
+}
+
+/* ============================================================================== */
+
+@media (max-width: 1250px) {
+    .home {
+        padding: 10px 0px 100px;
+
+        &__content {
+            flex-direction: column;
+            gap: 100px;
+        }
+
+        &__title {
+            text-align: center;
+        }
+
+        &__title-gif {
+            bottom: 30px;
+            right: 0px;
+        }
+
+        &__button {
+            margin: 0px auto;
+            text-align: center;
+
+            border-color: white;
+            color: white;
+
+            &:hover {
+                background-color: #ffffff;
+                transform: scale(1.08);
+
+                .home__button-text {
+                    color: rgb(0, 0, 0);
+                }
+            }
+        }
+
+        &__texts {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &__circle-1 {
+            display: none;
+        }
+
+        &__images {
+            margin-left: 70px;
+            margin-top: 70px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .home {
+        &__title {
+            font-size: 80px;
+        }
+
+        &__circle-2 {
+            top: -150px;
+            left: -100px;
+        }
+
+        &__circle-3 {
+            top: 220px;
+            right: 95px;
+        }
+
+        &__images {
+            margin-left: 80px;
+        }
+
+        &__main-image img {
+            width: 439px;
+        }
+
+        &__frame-1 img {
+            width: 279px;
+        }
+
+        &__frame-2 img {
+            width: 279px;
+        }
+
+        &__bg img {
+            width: 356px;
+        }
+
+        &__sparkles img {
+            margin-left: 100px;
+            width: 70px;
+        }
+
+        &__item {
+            font-size: 18px;
+        }
+    }
+}
+
+@media (max-width: 528px) {
+    .home {
+        &__title {
+            font-size: 55px;
+        }
+
+        &__contact {
+            width: 42px;
+            height: 42px;
+        }
+
+        &__circle-2 {
+            top: -150px;
+            width: 209px;
+            height: 209px;
+        }
+
+        &__circle-3 {
+            top: 150px;
+            right: 40px;
+
+            width: 209px;
+            height: 209px;
+        }
+
+        &__title-gif {
+            bottom: -25px;
+            right: -60px;
+        }
+
+        &__title-gif img {
+            width: 70px;
+        }
+
+        &__images {
+            margin-left: 90px;
+        }
+
+        &__main-image img {
+            width: 339px;
+        }
+
+        &__frame-1 img {
+            width: 179px;
+        }
+
+        &__frame-2 img {
+            width: 179px;
+        }
+
+        &__bg img {
+            width: 256px;
+        }
+
+        &__sparkles img {
+            margin-left: 100px;
+            width: 60px;
+        }
+
+        &__content {
+            gap: 170px;
+        }
+
+        &__item {
+            font-size: 14px;
+        }
     }
 }
