@@ -1468,13 +1468,6 @@ a {
   display: block;
 }
 
-.active-item .item-service-white::before {
-  background: url("../images/services/decor-black.png") 0 0 no-repeat !important;
-}
-.active-item .item-service-white::after {
-  background: url("../images/services/decor-black.png") 0 0 no-repeat !important;
-}
-
 .item-service {
   max-width: 271px;
   position: relative;
@@ -1496,6 +1489,8 @@ a {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 .item-service::before {
   content: "";
@@ -1507,6 +1502,8 @@ a {
   background: url("../images/services/decor-white-small.png") 0 0 no-repeat;
   width: 100%;
   height: 100%;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 .item-service::after {
   content: "";
@@ -1519,6 +1516,8 @@ a {
   width: 100%;
   height: 100%;
   opacity: 0;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 .item-service__icon {
   position: absolute;
@@ -1544,6 +1543,7 @@ a {
   font-size: 20px;
   color: #f4f4f4;
   margin-bottom: 40px;
+  max-width: 220px;
 }
 .item-service__button {
   width: 100%;
@@ -1562,9 +1562,13 @@ a {
 
 .active-item.item-service::before {
   background: url("../images/services/decor-white.png") 0 0 no-repeat !important;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 .active-item.item-service::after {
   background: url("../images/services/decor-white.png") 0 0 no-repeat !important;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 .item-service-white {
@@ -1595,7 +1599,22 @@ a {
 
 .item-service-white::before {
   background: url("../images/services/decor-black-small.png") 0 0 no-repeat;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 .item-service-white::after {
   background: url("../images/services/decor-black-small.png") 0 0 no-repeat;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.active-item.item-service-white::before {
+  background: url("../images/services/decor-black.png") 0 0 no-repeat !important;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.active-item.item-service-white::after {
+  background: url("../images/services/decor-black.png") 0 0 no-repeat !important;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
