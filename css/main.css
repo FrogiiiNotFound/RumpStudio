@@ -874,6 +874,93 @@ a {
   pointer-events: none;
 }
 
+/* ============================================================================== */
+@media (max-width: 1250px) {
+  .contacts {
+    padding: 0px 0px 10px 0px;
+  }
+  .contacts__title-wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 20px;
+    margin-bottom: 34px;
+  }
+  .contacts__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contacts__message {
+    margin: 0px auto;
+  }
+  .contacts__form {
+    min-width: 627px;
+    margin: 0px auto;
+  }
+}
+@media (max-width: 768px) {
+  .contacts__title-wrapper {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+  .contacts__form {
+    min-width: 498px;
+  }
+  .contacts__items {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    gap: 50px;
+    margin-bottom: 5px;
+  }
+  .contacts__item-title {
+    font-size: 15px;
+  }
+  .contacts__content {
+    gap: 50px;
+  }
+  .contacts__message {
+    max-width: 498px;
+  }
+}
+@media (max-width: 528px) {
+  .contacts__title {
+    font-size: 32px;
+  }
+  .contacts__message-title {
+    text-align: center;
+  }
+  .contacts__message-text {
+    text-align: center;
+  }
+  .contacts__info-title {
+    text-align: center;
+  }
+  .contacts__items {
+    gap: 10px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .contacts__item-title {
+    font-size: 15px;
+  }
+  .contacts__item-text {
+    display: none;
+  }
+  .contacts__message-button-wrapper {
+    max-width: 194px;
+    display: block;
+    margin: 0px auto;
+  }
+  .contacts__message-button {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0px auto;
+  }
+}
 .footer {
   padding-top: 100px;
 }
@@ -1101,6 +1188,9 @@ a {
 
 /* ============================================================================== */
 @media (max-width: 1250px) {
+  .footer {
+    padding-top: 50px;
+  }
   .footer__nav {
     display: none;
   }
