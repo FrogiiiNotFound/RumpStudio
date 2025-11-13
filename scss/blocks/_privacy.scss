@@ -1,0 +1,62 @@
+.privacy {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 80px 20px;
+
+    @media (max-width: 528px) {
+        padding: 40px 20px;
+    }
+    
+    &__title {
+        font-size: 25px;
+        font-weight: 600;
+        margin-bottom: 20px;
+
+        @media (max-width: 528px) {
+            font-size: 20px;
+        }
+    }
+
+    &__item {
+        &:not(:first-child) {
+            margin-top: 20px;
+        }
+    }
+
+    &__name {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+
+    &__list {
+        margin-top: 20px;
+    }
+
+    &__table {
+        border: 1px solid #2f2f2f;
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #2f2f2f;
+        }
+    }
+
+    &__table-name {
+        width: 100%;
+        max-width: 200px;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        border-right: 1px solid #2f2f2f;
+        height: 50px;
+    }
+
+    &__table-text {
+        padding-left: 20px;
+    }
+}
