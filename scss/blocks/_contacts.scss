@@ -3,25 +3,6 @@
     padding: 0px 0px 170px 0px;
     background: url("/images/contacts/bg.svg") 0 0px / cover no-repeat;
 
-    &__title-wrapper {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        margin-bottom: 64px;
-    }
-
-    &__title-decor {
-        width: 46px;
-        height: 4px;
-        background-color: #171717;
-    }
-
-    &__title {
-        font-weight: 600;
-        font-size: 48px;
-        color: #171717;
-    }
-
     &__content {
         display: flex;
         gap: 106px;
@@ -332,12 +313,6 @@
     .contacts {
         padding: 0px 0px 10px 0px;
 
-        &__title-wrapper {
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 34px;
-        }
-
         &__content {
             flex-direction: column;
         }
@@ -355,9 +330,6 @@
 
 @media (max-width: 768px) {
     .contacts {
-        &__title-wrapper {
-            justify-content: left;
-        }
         &__form {
             min-width: 498px;
         }
@@ -384,10 +356,6 @@
 
 @media (max-width: 528px) {
     .contacts {
-        &__title {
-            font-size: 32px;
-        }
-
         &__message-title {
             text-align: center;
         }
@@ -422,6 +390,30 @@
         &__message-button {
             justify-content: center;
             margin: 0px auto;
+        }
+
+        &__message {
+            padding: 25px;
+        }
+
+        &__message-title {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        &__message-text {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        &__info-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        &__form {
+            min-width: inherit;
+            margin: inherit;
         }
     }
 }

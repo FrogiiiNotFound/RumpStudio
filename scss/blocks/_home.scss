@@ -314,6 +314,8 @@
 
 @media (max-width: 528px) {
     .home {
+        padding: 10px 0px 50px;
+
         &__title {
             font-size: 55px;
         }
@@ -331,10 +333,10 @@
 
         &__circle-3 {
             top: 150px;
-            right: 40px;
+            right: 65px;
 
-            width: 209px;
-            height: 209px;
+            width: 159px;
+            height: 159px;
         }
 
         &__title-gif {
@@ -347,6 +349,7 @@
         }
 
         &__images {
+            margin-top: 10px;
             margin-left: 90px;
         }
 
@@ -376,7 +379,16 @@
         }
 
         &__item {
-            font-size: 14px;
+            font-size: 16px;
+        }
+
+        &__list {
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        &__content {
+            margin-bottom: 100px;
         }
     }
 }
