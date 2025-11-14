@@ -1333,6 +1333,18 @@ a {
     font-size: 20px;
   }
 }
+.privacy__title-disclaimer {
+  font-size: 25px;
+  font-weight: 600;
+}
+@media (max-width: 528px) {
+  .privacy__title-disclaimer {
+    font-size: 20px;
+  }
+}
+.privacy__date {
+  margin-bottom: 20px;
+}
 .privacy__item:not(:first-child) {
   margin-top: 20px;
 }

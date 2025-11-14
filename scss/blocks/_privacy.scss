@@ -17,6 +17,19 @@
         }
     }
 
+    &__title-disclaimer {
+        font-size: 25px;
+        font-weight: 600;
+
+        @media (max-width: 528px) {
+            font-size: 20px;
+        }
+    }
+
+    &__date {
+        margin-bottom: 20px;
+    }
+
     &__item {
         &:not(:first-child) {
             margin-top: 20px;
