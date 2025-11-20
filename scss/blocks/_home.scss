@@ -163,6 +163,7 @@
     }
 
     &__item {
+        z-index: 101;
         min-height: 23px;
         cursor: pointer;
         font-weight: 500;
