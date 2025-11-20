@@ -1,5 +1,5 @@
 .portfolio {
-    padding: 100px 0px;
+    padding: 50px 0px;
 
     &__title-wrapper {
         display: flex;
@@ -255,4 +255,66 @@
 .scene-active4 {
     top: 1030px;
     right: 540px;
+}
+
+/* ============================================================================== */
+
+@media (max-width: 950px) {
+    .portfolio {
+        &__scene {
+            display: none;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .portfolio {
+        &__card {
+            margin-bottom: 30px;
+        }
+
+        &__card-left {
+            margin-bottom: 30px;
+        }
+
+        &__overhead {
+            font-size: 20px;
+        }
+
+        &__card-title {
+            font-size: 44px;
+        }
+
+        &__text {
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-width: 528px) {
+    .portfolio {
+        &__overhead {
+            font-size: 17px;
+        }
+
+        &__card-title {
+            font-size: 41px;
+        }
+
+        &__card {
+            padding: 36px 30px 27px 30px;
+        }
+
+        &__card-left {
+            padding: 36px 30px 27px 30px;
+        }
+
+        &__text {
+            font-size: 17px;
+        }
+
+        &__btn {
+            max-width: 260px;
+            padding: 14.5px 0px;
+        }
+    }
 }
