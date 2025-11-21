@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
+  const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+
+  if (isMobileDevice) {
+    return;
+  }
+
   const homeSection = document.querySelector('.home');
   const parallaxElements = {
     '.home__main-image': { speed: 0.03, autoSpeed: 0.4, amplitude: 5 },
