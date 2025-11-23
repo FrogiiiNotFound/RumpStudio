@@ -23,9 +23,76 @@
 
     &__card {
         position: relative;
+        cursor: pointer;
+        overflow: hidden;
         max-width: 677px;
         background: #171717;
-        padding: 36px 67px 27px 40px;
+        padding: 36px 53px 27px 53px;
+        transition: backdrop-filter 0.2s linear;
+
+        &:hover {
+            backdrop-filter: blur(100px);
+
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__card1 {
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("../../images/projects/project3.png") 0 0 / cover no-repeat;
+            opacity: 0;
+            transition: opacity 0.2s linear;
+            z-index: 1;
+        }
+    }
+    &__card2 {
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("../../images/projects/project2.png") 0 0 / cover no-repeat;
+            opacity: 0;
+            transition: opacity 0.2s linear;
+            z-index: 1;
+        }
+        transition: backdrop-filter 0.2s linear;
+
+        &:hover {
+            .portfolio__text-black {
+                color: white !important;
+            }
+
+            backdrop-filter: blur(100px);
+
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+    &__card3 {
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("../../images/projects/project1.png") 0 0 / cover no-repeat;
+            opacity: 0;
+            transition: opacity 0.2s linear;
+            z-index: 1;
+        }
     }
 
     &__card-left {
@@ -35,13 +102,10 @@
         background: white;
         -webkit-box-shadow: 0 6px 26px -5px rgba(97, 61, 2, 0.4);
         box-shadow: 0 6px 26px -5px rgba(54, 54, 54, 0.4);
-        padding: 36px 67px 27px 40px;
+        padding: 36px 53px 27px 53px;
         margin: 0px 0px 0px auto;
-
-        &:hover {
-            backdrop-filter: blur(100px);
-            background: url("../../images/projects/project2.png") 0 0 / cover no-repeat;
-        }
+        cursor: pointer;
+        overflow: hidden;
     }
 
     &__overhead {
@@ -66,6 +130,7 @@
     }
 
     &__btn {
+        z-index: 2;
         cursor: pointer;
         max-width: 382px;
         position: relative;
@@ -127,6 +192,7 @@
     }
 
     &__btn-black {
+        z-index: 2;
         background-color: #171717;
 
         &::before {
@@ -167,6 +233,7 @@
     }
 
     &__card-decor1 {
+        z-index: 1;
         pointer-events: none;
         overflow: hidden;
         user-select: none;
@@ -176,6 +243,7 @@
     }
 
     &__card-decor2 {
+        z-index: 1;
         pointer-events: none;
         overflow: hidden;
         user-select: none;
@@ -185,6 +253,7 @@
     }
 
     &__card-decor1-black {
+        z-index: 1;
         pointer-events: none;
         overflow: hidden;
         user-select: none;
@@ -194,6 +263,7 @@
     }
 
     &__card-decor2-black {
+        z-index: 1;
         pointer-events: none;
         overflow: hidden;
         user-select: none;
@@ -208,7 +278,7 @@
 
     &__scene {
         position: absolute;
-        z-index: -100;
+        z-index: -1;
         transition: all 0.6s linear;
         animation: slide 2s ease-in-out 0.5s 3 normal;
     }
@@ -317,4 +387,12 @@
             padding: 14.5px 0px;
         }
     }
+}
+
+.portfolio__card2:hover .portfolio__btn {
+    background-color: #fff;
+}
+
+.portfolio__card2:hover .portfolio__btn-text {
+    color: #171717;
 }

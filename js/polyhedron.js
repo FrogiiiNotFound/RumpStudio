@@ -39,9 +39,9 @@ function createGradientIcosahedron() {
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / 2 / window.innerHeight, 0.1, 1000);
-const renderer = new THREE.WebGLRenderer({ antialias: true });
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 renderer.setSize(window.innerWidth / 2, window.innerHeight);
-renderer.setClearColor(0xf4f4f4, 1);
+renderer.setClearColor(0x000000, 0);
 
 const container = document.getElementById("three-js-container");
 container.appendChild(renderer.domElement);
@@ -58,36 +58,11 @@ scene.add(icosahedron);
 
 camera.position.z = 3;
 
-let targetX = 0;
-let targetY = 0;
-const speed = 0.05;
-
-function onMouseWheel(event) {
-    event.preventDefault();
-
-    if (event.deltaY > 0) {
-        targetY -= 1;
-    } else if (event.deltaY < 0) {
-        targetY += 1;
-    }
-
-    if (event.deltaX > 0) {
-        targetX += 1;
-    } else if (event.deltaX < 0) {
-        targetX -= 1;
-    }
-}
-
-container.addEventListener("wheel", onMouseWheel, { passive: false });
-
 function animate() {
     requestAnimationFrame(animate);
-
+    
     icosahedron.rotation.x += 0.002;
     icosahedron.rotation.y += 0.001;
-
-    icosahedron.position.x += (targetX - icosahedron.position.x) * speed;
-    icosahedron.position.y += (targetY - icosahedron.position.y) * speed;
 
     renderer.render(scene, camera);
 }

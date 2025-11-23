@@ -76,7 +76,7 @@
                                     <h1 class="home__title animated-text">Turn your ideas into reality</h1>
                                     <div class="home__title-gif">
                                         <img src="images/home/shine.gif" alt="shine" />
-                                    </div> 
+                                    </div>
                                     <div class="home__title-circles">
                                         <div class="home__circle-1"></div>
                                         <div class="home__circle-2"></div>
@@ -105,7 +105,7 @@
                                 </div>
                             </div>
                         </div>
-                        <menu class="home__menu">
+                        <nav class="home__menu">
                             <ul class="home__list">
                                 <li class="home__item home__item1 animated-text home__link"><p>Главная</p></li>
                                 <li class="home__item"><p>/</p></li>
@@ -117,7 +117,7 @@
                                 <li class="home__item"><p>/</p></li>
                                 <li class="home__item home__item5 animated-text home__link"><p>Контакты</p></li>
                             </ul>
-                        </menu>
+                        </nav>
                     </div>
                 </section>
                 <section class="portfolio">
@@ -321,7 +321,7 @@
                             </div>
                             <div class="services__item item-service" id="item-3">
                                 <div class="item-service__icon">
-                                    <img src="./images/icons/arrow-white.svg" alt=""/>
+                                    <img src="./images/icons/arrow-white.svg" alt="" />
                                 </div>
                                 <div class="item-service__title">Design</div>
                                 <p class="item-service__text">Разработка уникальных дизайнов</p>
@@ -669,24 +669,26 @@
                             </div>
                             <div class="footer__nav">
                                 <h3 class="footer__nav-title">Навигация</h3>
-                                <ul class="footer__nav-list">
-                                    <li class="footer__nav-item">
-                                        <div class="footer__nav-item-decor"></div>
-                                        <p class="footer__nav-item-text">Главная</p>
-                                    </li>
-                                    <li class="footer__nav-item">
-                                        <div class="footer__nav-item-decor"></div>
-                                        <p class="footer__nav-item-text">О нас</p>
-                                    </li>
-                                    <li class="footer__nav-item">
-                                        <div class="footer__nav-item-decor"></div>
-                                        <p class="footer__nav-item-text">Проекты</p>
-                                    </li>
-                                    <li class="footer__nav-item">
-                                        <div class="footer__nav-item-decor"></div>
-                                        <p class="footer__nav-item-text">Услуги</p>
-                                    </li>
-                                </ul>
+                                <nav class="home__menu">
+                                    <ul class="footer__nav-list">
+                                        <li class="footer__nav-item home__item1">
+                                            <div class="footer__nav-item-decor"></div>
+                                            <p class="footer__nav-item-text">Главная</p>
+                                        </li>
+                                        <li class="footer__nav-item home__item2">
+                                            <div class="footer__nav-item-decor"></div>
+                                            <p class="footer__nav-item-text">О нас</p>
+                                        </li>
+                                        <li class="footer__nav-item home__item3">
+                                            <div class="footer__nav-item-decor"></div>
+                                            <p class="footer__nav-item-text">Проекты</p>
+                                        </li>
+                                        <li class="footer__nav-item home__item4">
+                                            <div class="footer__nav-item-decor"></div>
+                                            <p class="footer__nav-item-text">Услуги</p>
+                                        </li>
+                                    </ul>
+                                </nav>
                             </div>
                             <div class="footer__directions">
                                 <h3 class="footer__directions-title">Работаем с направлениями</h3>
@@ -708,7 +710,7 @@
                             <div class="footer__contacts">
                                 <div class="footer__contact">
                                     <p class="footer__contact-title">Контакты</p>
-                                    <a href="tel:+79871752973">
+                                    <a class="footer__number" href="tel:+79871752973" onclick="copyPhoneNumber(event)">
                                         <div class="footer__contact-body">
                                             <div class="footer__contact-icon">
                                                 <svg
@@ -825,6 +827,35 @@
                 </div>
             </footer>
         </div>
+        <script>
+            function copyPhoneNumber(event) {
+                event.preventDefault();
+
+                const phoneText = document.querySelector(".footer__contact-text");
+                const originalText = phoneText.textContent;
+
+                // Копируем номер телефона в буфер обмена
+                navigator.clipboard
+                    .writeText("+79871752973")
+                    .then(() => {
+                        // Меняем текст на "Скопировано"
+                        phoneText.textContent = "Номер скопирован!";
+
+                        // Возвращаем исходный текст через 2 секунды
+                        setTimeout(() => {
+                            phoneText.textContent = originalText;
+                        }, 2000);
+                    })
+                    .catch((err) => {
+                        console.error("Ошибка при копировании: ", err);
+                        // Если копирование не удалось, все равно показываем "Скопировано"
+                        phoneText.textContent = "Скопировано";
+                        setTimeout(() => {
+                            phoneText.textContent = originalText;
+                        }, 2000);
+                    });
+            }
+        </script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>

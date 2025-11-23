@@ -372,6 +372,7 @@ a {
           align-items: center;
 }
 .home__item {
+  z-index: 101;
   min-height: 23px;
   cursor: pointer;
   font-weight: 500;
@@ -1269,6 +1270,8 @@ a {
     text-align: center;
   }
   .footer__addition {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1295,10 +1298,10 @@ a {
             justify-content: center;
   }
   .footer__right-reserved {
-    font-size: 13px;
+    font-size: 11px;
   }
   .footer__politics {
-    font-size: 13px;
+    font-size: 11px;
   }
   .footer__upper-content {
     padding: 24px 0px 24px;
@@ -1332,9 +1335,71 @@ a {
 }
 .portfolio__card {
   position: relative;
+  cursor: pointer;
+  overflow: hidden;
   max-width: 677px;
   background: #171717;
-  padding: 36px 67px 27px 40px;
+  padding: 36px 53px 27px 53px;
+  -webkit-transition: backdrop-filter 0.2s linear;
+  transition: backdrop-filter 0.2s linear;
+}
+.portfolio__card:hover {
+  backdrop-filter: blur(100px);
+}
+.portfolio__card:hover::before {
+  opacity: 1;
+}
+.portfolio__card1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../../images/projects/project3.png") 0 0/cover no-repeat;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+  z-index: 1;
+}
+.portfolio__card2 {
+  -webkit-transition: backdrop-filter 0.2s linear;
+  transition: backdrop-filter 0.2s linear;
+}
+.portfolio__card2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../../images/projects/project2.png") 0 0/cover no-repeat;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+  z-index: 1;
+}
+.portfolio__card2:hover {
+  backdrop-filter: blur(100px);
+}
+.portfolio__card2:hover .portfolio__text-black {
+  color: white !important;
+}
+.portfolio__card2:hover::before {
+  opacity: 1;
+}
+.portfolio__card3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../../images/projects/project1.png") 0 0/cover no-repeat;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+  z-index: 1;
 }
 .portfolio__card-left {
   position: relative;
@@ -1342,12 +1407,10 @@ a {
   background: white;
   -webkit-box-shadow: 0 6px 26px -5px rgba(97, 61, 2, 0.4);
   box-shadow: 0 6px 26px -5px rgba(54, 54, 54, 0.4);
-  padding: 36px 67px 27px 40px;
+  padding: 36px 53px 27px 53px;
   margin: 0px 0px 0px auto;
-}
-.portfolio__card-left:hover {
-  backdrop-filter: blur(100px);
-  background: url("../../images/projects/project2.png") 0 0/cover no-repeat;
+  cursor: pointer;
+  overflow: hidden;
 }
 .portfolio__overhead {
   font-weight: 400;
@@ -1368,6 +1431,7 @@ a {
   margin-bottom: 67px;
 }
 .portfolio__btn {
+  z-index: 2;
   cursor: pointer;
   max-width: 382px;
   position: relative;
@@ -1428,6 +1492,7 @@ a {
   color: #171717;
 }
 .portfolio__btn-black {
+  z-index: 2;
   background-color: #171717;
 }
 .portfolio__btn-black::before {
@@ -1463,6 +1528,7 @@ a {
   color: white;
 }
 .portfolio__card-decor1 {
+  z-index: 1;
   pointer-events: none;
   overflow: hidden;
   -webkit-user-select: none;
@@ -1474,6 +1540,7 @@ a {
   right: -40px;
 }
 .portfolio__card-decor2 {
+  z-index: 1;
   pointer-events: none;
   overflow: hidden;
   -webkit-user-select: none;
@@ -1485,6 +1552,7 @@ a {
   left: -40px;
 }
 .portfolio__card-decor1-black {
+  z-index: 1;
   pointer-events: none;
   overflow: hidden;
   -webkit-user-select: none;
@@ -1496,6 +1564,7 @@ a {
   left: 0px;
 }
 .portfolio__card-decor2-black {
+  z-index: 1;
   pointer-events: none;
   overflow: hidden;
   -webkit-user-select: none;
@@ -1511,7 +1580,7 @@ a {
 }
 .portfolio__scene {
   position: absolute;
-  z-index: -100;
+  z-index: -1;
   -webkit-transition: all 0.6s linear;
   transition: all 0.6s linear;
   -webkit-animation: slide 2s ease-in-out 0.5s 3 normal;
@@ -1586,6 +1655,14 @@ a {
     padding: 14.5px 0px;
   }
 }
+.portfolio__card2:hover .portfolio__btn {
+  background-color: #fff;
+}
+
+.portfolio__card2:hover .portfolio__btn-text {
+  color: #171717;
+}
+
 .services {
   padding: 50px 0px;
 }

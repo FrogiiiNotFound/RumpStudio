@@ -271,6 +271,7 @@
         }
 
         &__addition {
+            flex-wrap: wrap;
             justify-content: center;
         }
 
@@ -299,11 +300,11 @@
         }
 
         &__right-reserved {
-            font-size: 13px;
+            font-size: 11px;
         }
 
         &__politics {
-            font-size: 13px;
+            font-size: 11px;
         }
 
         &__upper-content {
