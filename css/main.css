@@ -1339,6 +1339,8 @@ a {
 }
 .portfolio__card {
   position: relative;
+  cursor: pointer;
+  overflow: hidden;
   max-width: 677px;
   background: #171717;
   padding: 36px 53px 27px 53px;
@@ -1411,6 +1413,8 @@ a {
   box-shadow: 0 6px 26px -5px rgba(54, 54, 54, 0.4);
   padding: 36px 53px 27px 53px;
   margin: 0px 0px 0px auto;
+  cursor: pointer;
+  overflow: hidden;
 }
 .portfolio__overhead {
   font-weight: 400;
@@ -1580,7 +1584,7 @@ a {
 }
 .portfolio__scene {
   position: absolute;
-  z-index: 100;
+  z-index: -1;
   -webkit-transition: all 0.6s linear;
   transition: all 0.6s linear;
   -webkit-animation: slide 2s ease-in-out 0.5s 3 normal;
@@ -1655,6 +1659,14 @@ a {
     padding: 14.5px 0px;
   }
 }
+.portfolio__card2:hover .portfolio__btn {
+  background-color: #fff;
+}
+
+.portfolio__card2:hover .portfolio__btn-text {
+  color: #171717;
+}
+
 .services {
   padding: 50px 0px;
 }

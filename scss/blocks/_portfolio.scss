@@ -23,6 +23,8 @@
 
     &__card {
         position: relative;
+        cursor: pointer;
+        overflow: hidden;
         max-width: 677px;
         background: #171717;
         padding: 36px 53px 27px 53px;
@@ -102,6 +104,8 @@
         box-shadow: 0 6px 26px -5px rgba(54, 54, 54, 0.4);
         padding: 36px 53px 27px 53px;
         margin: 0px 0px 0px auto;
+        cursor: pointer;
+        overflow: hidden;
     }
 
     &__overhead {
@@ -274,7 +278,7 @@
 
     &__scene {
         position: absolute;
-        z-index: 100;
+        z-index: -1;
         transition: all 0.6s linear;
         animation: slide 2s ease-in-out 0.5s 3 normal;
     }
@@ -383,4 +387,12 @@
             padding: 14.5px 0px;
         }
     }
+}
+
+.portfolio__card2:hover .portfolio__btn {
+    background-color: #fff;
+}
+
+.portfolio__card2:hover .portfolio__btn-text {
+    color: #171717;
 }
