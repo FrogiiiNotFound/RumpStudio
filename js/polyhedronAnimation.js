@@ -1,4 +1,8 @@
 function checkCenterCard() {
+    if (window.innerWidth < 768) {
+        return;
+    }
+
     const scene = document.querySelector(".portfolio__scene");
     const cards = [
         document.querySelector(".portfolio__card1"),

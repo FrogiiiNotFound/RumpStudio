@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
-
-  if (isMobileDevice) {
+  if (window.innerWidth < 768) {
     return;
   }
 
