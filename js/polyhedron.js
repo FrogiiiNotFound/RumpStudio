@@ -1,4 +1,8 @@
 function createGradientIcosahedron() {
+    if (window.innerWidth < 768) {
+        return;
+    }
+    
     const geometry = new THREE.IcosahedronGeometry(0.8, 1);
 
     const colors = [];
@@ -60,7 +64,7 @@ camera.position.z = 3;
 
 function animate() {
     requestAnimationFrame(animate);
-    
+
     icosahedron.rotation.x += 0.002;
     icosahedron.rotation.y += 0.001;
 

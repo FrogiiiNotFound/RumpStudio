@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
+  if (window.innerWidth < 768) {
+    return;
+  }
+
   const homeSection = document.querySelector('.home');
   const parallaxElements = {
     '.home__main-image': { speed: 0.03, autoSpeed: 0.4, amplitude: 5 },

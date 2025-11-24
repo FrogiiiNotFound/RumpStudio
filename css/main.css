@@ -1155,6 +1155,7 @@ a {
   margin-bottom: 7px;
 }
 .footer__contact-body {
+  min-width: 216.2px;
   display: inline-block;
   cursor: pointer;
   display: -webkit-box;
@@ -1288,6 +1289,9 @@ a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .footer__direction-item {
+    padding: 4px 9px;
   }
   .footer__contact-title {
     text-align: center;
