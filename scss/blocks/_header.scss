@@ -36,11 +36,51 @@
     }
 }
 
+@media (max-width: 768px) {
+    .header {
+        padding: 20px 0px;
+        
+        &__contacts {
+            gap: 15px;
+        }
+        
+        &__contact {
+            width: 48px;
+            height: 48px;
+        }
+    }
+}
+
 @media (max-width: 528px) {
     .header {
+        padding: 15px 0px;
+        
+        &__contacts {
+            gap: 10px;
+            justify-content: center;
+        }
+        
         &__contact {
             width: 42px;
             height: 42px;
+        }
+        
+        &__icon {
+            width: 20px !important;
+            height: 20px !important;
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    .header {
+        &__contacts {
+            gap: 8px;
+        }
+        
+        &__contact {
+            width: 38px;
+            height: 38px;
         }
     }
 }

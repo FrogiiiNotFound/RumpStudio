@@ -160,6 +160,7 @@
         gap: 10px;
         justify-content: end;
         align-items: center;
+        flex-wrap: wrap;
     }
 
     &__item {
@@ -171,6 +172,11 @@
         line-height: 99%;
         letter-spacing: 0.01em;
         color: #171717 !important;
+        touch-action: manipulation;
+        
+        p {
+            user-select: none;
+        }
     }
 
     &__link {
@@ -319,6 +325,7 @@
 
         &__title {
             font-size: 55px;
+            line-height: 1.1;
         }
 
         &__contact {
@@ -351,45 +358,107 @@
 
         &__images {
             margin-top: 10px;
-            margin-left: 90px;
+            margin-left: 50px;
         }
 
         &__main-image img {
-            width: 339px;
+            width: 280px;
+            max-width: 100%;
         }
 
         &__frame-1 img {
-            width: 179px;
+            width: 150px;
         }
 
         &__frame-2 img {
-            width: 179px;
+            width: 150px;
         }
 
         &__bg img {
-            width: 256px;
+            width: 220px;
         }
 
         &__sparkles img {
-            margin-left: 100px;
-            width: 60px;
+            margin-left: 50px;
+            width: 50px;
         }
 
         &__content {
-            gap: 170px;
+            gap: 120px;
+            margin-bottom: 100px;
         }
 
         &__item {
-            font-size: 16px;
+            font-size: 14px;
         }
 
         &__list {
-            gap: 5px;
+            gap: 8px;
             flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__menu {
+            margin-top: 20px;
+        }
+
+        &__button {
+            padding: 12px 20px;
+        }
+
+        &__button-text {
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    .home {
+        padding: 10px 0px 30px;
+
+        &__title {
+            font-size: 42px;
+        }
+
+        &__images {
+            margin-left: 30px;
+        }
+
+        &__main-image img {
+            width: 240px;
+        }
+
+        &__frame-1 img {
+            width: 120px;
+        }
+
+        &__frame-2 img {
+            width: 120px;
+        }
+
+        &__bg img {
+            width: 180px;
         }
 
         &__content {
-            margin-bottom: 100px;
+            gap: 80px;
+            margin-bottom: 60px;
+        }
+
+        &__item {
+            font-size: 12px;
+        }
+
+        &__list {
+            gap: 3px;
+        }
+
+        &__button {
+            padding: 10px 16px;
+        }
+
+        &__button-text {
+            font-size: 14px;
         }
     }
 }

@@ -362,29 +362,84 @@
 
 @media (max-width: 528px) {
     .portfolio {
+        padding: 30px 0px;
+
+        &__title-wrapper {
+            margin-bottom: 40px;
+            gap: 15px;
+        }
+
+        &__title-text {
+            font-size: 36px;
+        }
+
+        &__title-decor {
+            width: 36px;
+            height: 3px;
+        }
+
         &__overhead {
-            font-size: 17px;
+            font-size: 16px;
         }
 
         &__card-title {
-            font-size: 41px;
+            font-size: 36px;
+            margin-bottom: 12px;
         }
 
         &__card {
-            padding: 36px 30px 27px 30px;
+            padding: 25px 20px 20px 20px;
+            margin-bottom: 20px;
         }
 
         &__card-left {
-            padding: 36px 30px 27px 30px;
+            padding: 25px 20px 20px 20px;
+            margin-bottom: 20px;
         }
 
         &__text {
-            font-size: 17px;
+            font-size: 16px;
+            margin-bottom: 40px;
         }
 
         &__btn {
-            max-width: 260px;
-            padding: 14.5px 0px;
+            max-width: 100%;
+            padding: 14px 0px;
+            width: 100%;
+        }
+
+        &__btn-text {
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    .portfolio {
+        padding: 20px 0px;
+
+        &__title-text {
+            font-size: 28px;
+        }
+
+        &__card-title {
+            font-size: 28px;
+        }
+
+        &__overhead {
+            font-size: 14px;
+        }
+
+        &__text {
+            font-size: 14px;
+        }
+
+        &__card {
+            padding: 20px 15px 15px 15px;
+        }
+
+        &__card-left {
+            padding: 20px 15px 15px 15px;
         }
     }
 }

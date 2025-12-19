@@ -2,7 +2,9 @@
 <html lang="ru">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="mobile-web-app-capable" content="yes" />
         <link rel="stylesheet" href="css/main.css" />
         <title>RumpWebstudio - Студия разработки сайтов и веб-приложений</title>
         <meta
@@ -779,24 +781,28 @@
                                         type="text"
                                         class="contacts__input"
                                         placeholder="Александ Александров"
+                                        autocomplete="name"
                                     />
                                 </div>
                                 <div class="contacts__input-wrapper">
                                     <label for="mail" class="contacts__label">Почта</label>
                                     <input
                                         name="mail"
-                                        type="text"
+                                        type="email"
                                         class="contacts__input"
                                         placeholder="yourmail@example.com"
+                                        autocomplete="email"
+                                        inputmode="email"
                                     />
                                 </div>
                                 <div class="contacts__textarea-wrapper">
                                     <label for="message" class="contacts__label">Сообщение</label>
                                     <textarea
                                         name="message"
-                                        id=""
+                                        id="message"
                                         class="contacts__textarea"
                                         placeholder="Опишите вашу задачу и как с вами связаться"
+                                        rows="6"
                                     ></textarea>
                                 </div>
                                 <div class="contacts__form-button">

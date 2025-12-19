@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const homeSection = document.querySelector(".home");
 
-    // Упрощаем настройки, но сохраняем анимацию движения для всех устройств
     const parallaxElements = {
         ".home__main-image": { speed: 0.03, autoSpeed: 0.4, amplitude: 5 },
         ".home__frame-1": { speed: 0.05, autoSpeed: 0.6, amplitude: 8 },
@@ -38,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         windowHeight = window.innerHeight;
     });
 
-    // На мобилках отключаем только отслеживание мыши, но оставляем автоматическую анимацию
+    // Только на десктопе включаем отслеживание мыши для параллакса
     if (!isMobileDevice()) {
         document.addEventListener("mousemove", function (e) {
             mouseX = e.clientX - windowWidth / 2;
@@ -105,7 +104,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         Promise.all(promises).then(() => {
-            isParallaxActive = true;
+            // Параллакс активен только на десктопе
+            if (!isMobileDevice()) isParallaxActive = true;
             animateParallax();
         });
     }
@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 let mouseMoveX = 0;
                 let mouseMoveY = 0;
 
-                // На мобилках отключаем движение от мыши, но оставляем автоматическую анимацию
+                // Движение мышью только на десктопе
                 if (!isMobileDevice() && isMouseInHomeSection) {
                     mouseMoveX = mouseX * config.speed;
                     mouseMoveY = mouseY * config.speed;
@@ -145,23 +145,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function animateParallax() {
-        if (!isParallaxActive) return;
         requestAnimationFrame(animateParallax);
         updateParallax();
     }
 
     initScaleAnimations();
 
-    const shineElement = document.querySelector(".home__title-gif");
-    if (shineElement) {
-        setInterval(() => {
-            shineElement.style.transform = "scale(1.1) rotate(3deg)";
-            setTimeout(() => {
-                shineElement.style.transform = "scale(1) rotate(0deg)";
-            }, 600);
-        }, 4000);
-    }
-
+    // Кнопка
     const homeButton = document.querySelector(".home__button");
     if (homeButton) {
         if (!isMobileDevice()) {

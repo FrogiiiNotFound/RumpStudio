@@ -71,6 +71,14 @@ a {
     margin: 0 auto;
     padding: 0px 15px;
     box-sizing: content-box;
+    
+    @media (max-width: 768px) {
+        padding: 0px 20px;
+    }
+    
+    @media (max-width: 480px) {
+        padding: 0px 15px;
+    }
 }
 
 .wrap {
@@ -78,4 +86,74 @@ a {
     display: flex;
     flex-direction: column;
     min-height: 100%;
+}
+
+// Оптимизация для мобильных устройств
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+input,
+textarea,
+button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+}
+
+input[type="email"],
+input[type="tel"],
+input[type="text"],
+textarea {
+    font-size: 16px; // Предотвращает зум на iOS
+    
+    @media (max-width: 480px) {
+        font-size: 16px;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+// Оптимизация для touch-устройств
+button,
+a,
+[role="button"] {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+}
+
+// Улучшение читаемости текста на мобильных
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+// Предотвращение горизонтального скролла
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+// Улучшение работы форм на мобильных
+input,
+textarea,
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+}
+
+// Оптимизация для маленьких экранов
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
 }
