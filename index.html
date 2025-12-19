@@ -124,6 +124,88 @@
                         </nav>
                     </div>
                 </section>
+                <section class="about">
+                    <div class="about__container _container">
+                        <div class="about__info">
+                            <p class="about__text">
+                                At PixelPulse, we blend creativity with technology to build immersive digital
+                                experiences. Our team of passinate designers and developers work tirelessly to bring
+                                your vision to life.
+                            </p>
+                            <div class="about__content">
+                                <div class="about__item">
+                                    <div class="about__line"></div>
+                                    <div class="about__count">
+                                        <div class="about__number">150</div>
+                                        <div class="about__subtext">clients</div>
+                                    </div>
+                                </div>
+                                <div class="about__item">
+                                    <div class="about__line"></div>
+                                    <div class="about__count">
+                                        <div class="about__number">85</div>
+                                        <div class="about__subtext">clients</div>
+                                    </div>
+                                </div>
+                                <div class="about__item">
+                                    <div class="about__line"></div>
+                                    <div class="about__count">
+                                        <div class="about__number">8</div>
+                                        <div class="about__subtext">years</div>
+                                    </div>
+                                </div>
+                                <div class="about__item">
+                                    <div class="about__line"></div>
+                                    <div class="about__count">
+                                        <div class="about__number">12</div>
+                                        <div class="about__subtext">awards</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="about__button">
+                                <a href="" class="about__link">Заказать сайт</a>
+                            </div>
+                        </div>
+                        <div class="about__image">
+                            <img src="./images/about/about-image.png" alt="" />
+                        </div>
+                        <!-- <div class="about__background">
+                            <div class="about__decor about__decor-1">
+                                <img src="./images/about/about-decor-1.png" alt="" />
+                            </div>
+                            <div class="about__decor about__decor-2">
+                                <img src="./images/about/about-decor-2.png" alt="" />
+                            </div>
+                            <div class="about__decor about__decor-3">
+                                <img src="./images/about/about-decor-3.png" alt="" />
+                            </div>
+                            <div class="about__decor about__decor-4">
+                                <img src="./images/about/about-decor-4.png" alt="" />
+                            </div>
+                            <div class="about__decor about__decor-5">
+                                <img src="./images/about/about-decor-5.png" alt="" />
+                            </div>
+                            <div class="about__decor about__decor-6">
+                                <img src="./images/about/about-decor-6.png" alt="" />
+                            </div>
+                            <div class="about__decor about__decor-7">
+                                <img src="./images/about/about-decor-7.png" alt="" />
+                            </div>
+                            <div class="about__decor about__decor-8">
+                                <img src="./images/about/about-decor-8.png" alt="" />
+                            </div>
+                            <div class="about__decor about__decor-9">
+                                <img src="./images/about/about-decor-9.png" alt="" />
+                            </div>
+                            <div class="about__decor about__decor-10">
+                                <img src="./images/about/about-decor-10.png" alt="" />
+                            </div>
+                            <div class="about__decor about__decor-11">
+                                <img src="./images/about/about-decor-11.png" alt="" />
+                            </div>
+                        </div> -->
+                    </div>
+                </section>
                 <section class="portfolio">
                     <div class="portfolio__container _container">
                         <div class="portfolio__title-wrapper title">
@@ -393,7 +475,7 @@
                                                     </div>
                                                 </div>
                                             </a>
-                                            <a href="">
+                                            <a href="https://t.me/rumpwebstudio">
                                                 <div class="contacts__item">
                                                     <div class="contacts__item-icon">
                                                         <svg
@@ -540,37 +622,44 @@
                                     </div>
                                 </div>
                             </div>
-                            <form action="" class="contacts__form">
+                            <form action="https://api.web3forms.com/submit" method="POST" class="contacts__form">
+                                <input type="hidden" name="access_key" value="6e225e3c-e82e-47b5-ba20-71ae050ab2a2" />
                                 <div class="contacts__input-wrapper">
                                     <label for="name" class="contacts__label">Ваше имя</label>
                                     <input
                                         name="name"
                                         type="text"
-                                        class="contacts__input"
+                                        class="contacts__input name-input"
                                         placeholder="Александ Александров"
+                                        required
                                     />
+                                    <div class="input__error name-error"></div>
                                 </div>
                                 <div class="contacts__input-wrapper">
                                     <label for="mail" class="contacts__label">Почта</label>
                                     <input
                                         name="mail"
-                                        type="text"
-                                        class="contacts__input"
+                                        type="email"
+                                        class="contacts__input email-input"
                                         placeholder="yourmail@example.com"
+                                        required
                                     />
+                                    <div class="input__error email-error"></div>
                                 </div>
                                 <div class="contacts__textarea-wrapper">
                                     <label for="message" class="contacts__label">Сообщение</label>
                                     <textarea
                                         name="message"
                                         id=""
-                                        class="contacts__textarea"
+                                        class="contacts__textarea message-input"
                                         placeholder="Опишите вашу задачу и как с вами связаться"
+                                        required
                                     ></textarea>
+                                    <div class="input__error message-error"></div>
                                 </div>
-                                <div class="contacts__form-button">
-                                    <p class="contacts__form-button-text">Отправить на почту</p>
-                                </div>
+                                <button class="contacts__form-button contacts__form-button-text">
+                                    Отправить на почту
+                                </button>
                             </form>
                         </div>
                     </div>
@@ -711,18 +800,22 @@
                             <div class="footer__directions">
                                 <h3 class="footer__directions-title">Работаем с направлениями</h3>
                                 <ul class="footer__direction-list">
-                                    <li class="footer__direction-item">Партнерский маркетинг</li>
-                                    <li class="footer__direction-item">Ставки</li>
-                                    <li class="footer__direction-item">Беттинг</li>
-                                    <li class="footer__direction-item">Трейдинг</li>
-                                    <li class="footer__direction-item">Производство</li>
-                                    <li class="footer__direction-item">Страхование</li>
-                                    <li class="footer__direction-item">Здравоохранение</li>
-                                    <li class="footer__direction-item">Финансы</li>
-                                    <li class="footer__direction-item">Сельское хозяйство</li>
-                                    <li class="footer__direction-item">Логистика</li>
-                                    <li class="footer__direction-item">Нефть & газ</li>
-                                    <li class="footer__direction-item">80+</li>
+                                    <a href="https://t.me/rootg00se" class="footer__direction-item"
+                                        >Партнерский маркетинг</a
+                                    >
+                                    <a href="https://t.me/rootg00se" class="footer__direction-item">Ставки</a>
+                                    <a href="https://t.me/rootg00se" class="footer__direction-item">Беттинг</a>
+                                    <a href="https://t.me/rootg00se" class="footer__direction-item">Трейдинг</a>
+                                    <a href="https://t.me/rootg00se" class="footer__direction-item">Производство</a>
+                                    <a href="https://t.me/rootg00se" class="footer__direction-item">Страхование</a>
+                                    <a href="https://t.me/rootg00se" class="footer__direction-item">Здравоохранение</a>
+                                    <a href="https://t.me/rootg00se" class="footer__direction-item">Финансы</a>
+                                    <a href="https://t.me/rootg00se" class="footer__direction-item"
+                                        >Сельское хозяйство</a
+                                    >
+                                    <a href="https://t.me/rootg00se" class="footer__direction-item">Логистика</a>
+                                    <a href="https://t.me/rootg00se" class="footer__direction-item">Нефть & газ</a>
+                                    <a href="https://t.me/rootg00se" class="footer__direction-item">80+</a>
                                 </ul>
                             </div>
                             <div class="footer__contacts">
@@ -863,5 +956,6 @@
         <script src="js/polyhedronAnimation.js"></script>
         <script src="js/servicesAnimation.js"></script>
         <script src="js/copyToClipboard.js"></script>
+        <script src="js/formValidation.js"></script>
     </body>
 </html>
