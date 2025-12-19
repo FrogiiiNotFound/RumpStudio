@@ -315,17 +315,14 @@
 
         &__content {
             flex-direction: column;
-            gap: 40px;
         }
 
         &__message {
             margin: 0px auto;
-            max-width: 100%;
         }
 
         &__form {
-            min-width: 100%;
-            max-width: 627px;
+            min-width: 627px;
             margin: 0px auto;
         }
     }
@@ -333,26 +330,14 @@
 
 @media (max-width: 768px) {
     .contacts {
-        padding: 30px 0px 50px 0px;
-
         &__form {
-            min-width: 100%;
-            max-width: 498px;
+            min-width: 498px;
         }
 
         &__items {
-            flex-wrap: wrap;
-            gap: 30px;
-            margin-bottom: 20px;
-            justify-content: center;
-        }
-
-        &__column {
-            display: flex;
-            flex-direction: row;
-            gap: 30px;
-            flex-wrap: wrap;
-            justify-content: center;
+            flex-wrap: nowrap;
+            gap: 50px;
+            margin-bottom: 5px;
         }
 
         &__item-title {
@@ -360,81 +345,44 @@
         }
 
         &__content {
-            gap: 40px;
+            gap: 50px;
         }
 
         &__message {
-            max-width: 100%;
+            max-width: 498px;
         }
     }
 }
 
 @media (max-width: 528px) {
     .contacts {
-        padding: 30px 0px 50px 0px;
-
-        &__title-wrapper {
-            margin-bottom: 30px;
-        }
-
-        &__content {
-            gap: 30px;
-        }
-
         &__message-title {
             text-align: center;
-            font-size: 28px;
-            margin-bottom: 10px;
         }
 
         &__message-text {
             text-align: center;
-            font-size: 16px;
-            margin-bottom: 25px;
         }
 
         &__info-title {
             text-align: center;
-            font-size: 18px;
-            margin-bottom: 20px;
         }
 
         &__items {
-            gap: 15px;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        &__column {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        &__item {
-            width: 100%;
-            max-width: 280px;
-            justify-content: center;
+            gap: 10px;
+            justify-content: space-around;
         }
 
         &__item-title {
-            font-size: 14px;
+            font-size: 15px;
         }
 
         &__item-text {
-            font-size: 12px;
-        }
-
-        &__item-icon {
-            width: 40px;
-            height: 40px;
-            flex-shrink: 0;
+            display: none;
         }
 
         &__message-button-wrapper {
-            max-width: 100%;
+            max-width: 194px;
             display: block;
             margin: 0px auto;
         }
@@ -442,74 +390,30 @@
         &__message-button {
             justify-content: center;
             margin: 0px auto;
-            width: 100%;
-            max-width: 280px;
-            padding: 12px 16px;
-        }
-
-        &__message-button-text {
-            font-size: 13px;
         }
 
         &__message {
-            padding: 20px;
-            max-width: 100%;
+            padding: 25px;
+        }
+
+        &__message-title {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        &__message-text {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        &__info-title {
+            font-size: 20px;
+            margin-bottom: 10px;
         }
 
         &__form {
             min-width: inherit;
             margin: inherit;
-            padding: 20px;
-        }
-
-        &__input {
-            padding: 10px 12px;
-            font-size: 16px;
-        }
-
-        &__textarea {
-            min-height: 150px;
-            padding: 10px 12px;
-            font-size: 16px;
-        }
-
-        &__form-button {
-            width: 100%;
-            padding: 12px 16px;
-        }
-
-        &__form-button-text {
-            font-size: 13px;
-        }
-    }
-}
-
-@media (max-width: 380px) {
-    .contacts {
-        padding: 20px 0px 40px 0px;
-
-        &__message-title {
-            font-size: 24px;
-        }
-
-        &__message-text {
-            font-size: 14px;
-        }
-
-        &__info-title {
-            font-size: 16px;
-        }
-
-        &__item {
-            max-width: 100%;
-        }
-
-        &__message {
-            padding: 15px;
-        }
-
-        &__form {
-            padding: 15px;
         }
     }
 }

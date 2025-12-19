@@ -2,7 +2,16 @@
 
 gsap.registerPlugin(ScrollTrigger);
 
+function isMobileDevice() {
+    return (
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+        window.innerWidth <= 768
+    );
+}
+
 function initTextAnimations() {
+    if (isMobileDevice()) return;
+
     const textElements = document.querySelectorAll(".animated-text");
 
     textElements.forEach((element) => {
@@ -87,7 +96,7 @@ function initTextAnimations() {
             }
         );
 
-        const scrollTrigger = ScrollTrigger.create({
+        ScrollTrigger.create({
             trigger: element,
             start: "top 80%",
             end: "bottom 20%",
@@ -112,5 +121,7 @@ function initTextAnimations() {
 document.addEventListener("DOMContentLoaded", initTextAnimations);
 
 window.addEventListener("load", function () {
-    ScrollTrigger.refresh();
+    if (!isMobileDevice()) {
+        ScrollTrigger.refresh();
+    }
 });

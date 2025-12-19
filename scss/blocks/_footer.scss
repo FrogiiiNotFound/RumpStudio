@@ -284,146 +284,40 @@
 
 @media (max-width: 528px) {
     .footer {
-        padding-top: 30px;
-
-        &__upper-content {
-            padding: 20px 0px;
-        }
-
-        &__columns {
-            gap: 25px;
-        }
-
-        &__main {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        &__logo {
-            margin-bottom: 15px;
-        }
-
-        &__timeline-title {
-            text-align: center;
-            font-size: 14px;
-        }
-
-        &__timeline-text {
-            text-align: center;
-            font-size: 14px;
-        }
-
-        &__socials {
-            justify-content: center;
-        }
-
-        &__directions {
-            width: 100%;
-        }
-
         &__directions-title {
             text-align: center;
-            font-size: 14px;
         }
 
         &__direction-list {
             justify-content: center;
-            max-width: 100%;
         }
 
         &__direction-item {
-            padding: 4px 8px;
-            font-size: 12px;
+            padding: 4px 9px;
         }
 
         &__contact-title {
             text-align: center;
-            font-size: 14px;
         }
 
         &__contact-body {
             justify-content: center;
-            min-width: auto;
-        }
-
-        &__contact-icon {
-            width: 20px;
-            height: 20px;
-
-            svg {
-                width: 20px;
-                height: 20px;
-            }
-        }
-
-        &__contact-text {
-            font-size: 13px;
-        }
-
-        &__lower-container {
-            padding: 15px 10px;
-        }
-
-        &__lower-content {
-            flex-direction: column;
-            gap: 10px;
-            align-items: center;
-        }
-
-        &__copyright {
-            font-size: 12px;
-            text-align: center;
-        }
-
-        &__addition {
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 5px;
         }
 
         &__right-reserved {
             font-size: 11px;
-            text-align: center;
         }
 
         &__politics {
             font-size: 11px;
-            text-align: center;
+        }
+
+        &__upper-content {
+            padding: 24px 0px 24px;
         }
 
         &__contacts {
             display: none;
-        }
-    }
-}
-
-@media (max-width: 380px) {
-    .footer {
-        &__upper-content {
-            padding: 15px 0px;
-        }
-
-        &__columns {
-            gap: 20px;
-        }
-
-        &__direction-item {
-            padding: 3px 6px;
-            font-size: 11px;
-        }
-
-        &__copyright {
-            font-size: 11px;
-        }
-
-        &__right-reserved {
-            font-size: 10px;
-        }
-
-        &__politics {
-            font-size: 10px;
         }
     }
 }
