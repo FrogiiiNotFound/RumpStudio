@@ -5,18 +5,14 @@ function copyToClipboard(event, textToCopy) {
     const contactText = event.currentTarget.querySelector('.footer__contact-text');
     const originalText = contactText.textContent;
     
-    // Копируем текст в буфер обмена
     navigator.clipboard.writeText(textToCopy).then(() => {
-        // Меняем текст на "Скопировано"
         contactText.textContent = 'Скопировано!';
         
-        // Возвращаем исходный текст через 2 секунды
         setTimeout(() => {
             contactText.textContent = originalText;
         }, 2000);
     }).catch(err => {
         console.error('Ошибка при копировании: ', err);
-        // Если копирование не удалось, все равно показываем "Скопировано"
         contactText.textContent = 'Скопировано';
         setTimeout(() => {
             contactText.textContent = originalText;

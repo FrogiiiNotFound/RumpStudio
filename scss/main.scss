@@ -1,14 +1,12 @@
 //fonts
-@import url(https://fonts.googleapis.com/css?family=Kameron:regular,500,600,700);
-@import url(https://fonts.googleapis.com/css?family=Kalnia:100,200,300,regular,500,600,700);
-@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,800,800italic,900,900italic);
-@import url(https://fonts.googleapis.com/css?family=Kay+Pho+Du:regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Kameron:700);
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:300,regular,500);
 
 // helpers
-@import './base/vars';
-@import './base/helpers';
-@import './base/reset';
-@import './base/repeat';
+@import "./base/vars";
+@import "./base/helpers";
+@import "./base/reset";
+@import "./base/repeat";
 
 // blocks
 @import './blocks/header';

@@ -1,10 +1,241 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="css/main.css" />
-        <title>RumpWebstudio - Turn your ideas into reality</title>
+        <title>RumpWebstudio - Студия разработки сайтов и веб-приложений</title>
+        <meta
+            name="description"
+            content="Разработка современных сайтов под ключ. Правки и доработка сайтов.Продвижение сайта в интернете. SEO оптимизация. Портфолио web-студии rump"
+        />
+        <meta
+            name="keywords"
+            content="веб-разработка, создание сайтов, разработка веб-приложений, лендинги, дизайн сайтов, SEO оптимизация, веб-студия, RumpWebstudio"
+        />
+        <meta name="author" content="RumpWebstudio" />
+        <meta name="robots" content="index, follow" />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://rumpwebstudio.com/" />
+        <meta property="og:title" content="RumpWebstudio - Студия разработки сайтов и веб-приложений" />
+        <meta
+            property="og:description"
+            content="Разработка современных сайтов под ключ. Правки и доработка сайтов. Продвижение сайта в интернете. SEO оптимизация. Портфолио web-студии rump"
+        />
+        <meta property="og:image" content="https://rumpwebstudio.com/images/icons/logo-small.png" />
+        <meta property="og:locale" content="ru_RU" />
+        <meta property="og:site_name" content="RumpWebstudio" />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://rumpwebstudio.com/" />
+        <meta property="twitter:title" content="RumpWebstudio - Студия разработки сайтов и веб-приложений" />
+        <meta
+            property="twitter:description"
+            content="Разработка современных сайтов под ключ. Правки и доработка сайтов. Продвижение сайта в интернете. SEO оптимизация."
+        />
+        <meta property="twitter:image" content="https://rumpwebstudio.com/images/icons/logo-small.png" />
+
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://rumpwebstudio.com/" />
+
+        <!-- Schema.org JSON-LD разметка -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "RumpWebstudio",
+                "alternateName": "Rump Studio",
+                "url": "https://rumpwebstudio.com",
+                "logo": "https://rumpwebstudio.com/images/icons/logo-small.png",
+                "description": "Студия разработки сайтов и веб-приложений. Разработка современных сайтов под ключ, правки и доработка сайтов, продвижение сайта в интернете, SEO оптимизация.",
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+7-987-175-29-73",
+                    "contactType": "customer service",
+                    "email": "rumpwebstudio@gmail.com",
+                    "availableLanguage": ["Russian", "English"]
+                },
+                "sameAs": [
+                    "https://t.me/rootg00se",
+                    "https://www.tiktok.com/@rumpwebstudio",
+                    "https://www.youtube.com/channel/UCT34dxG7pvZirWAD2l2W-Uw"
+                ],
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressCountry": "RU"
+                },
+                "openingHoursSpecification": [
+                    {
+                        "@type": "OpeningHoursSpecification",
+                        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                        "opens": "07:00",
+                        "closes": "22:00"
+                    },
+                    {
+                        "@type": "OpeningHoursSpecification",
+                        "dayOfWeek": ["Saturday", "Sunday"],
+                        "opens": "09:00",
+                        "closes": "21:00"
+                    }
+                ],
+                "areaServed": {
+                    "@type": "Country",
+                    "name": "Russia"
+                }
+            }
+        </script>
+
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "RumpWebstudio",
+                "url": "https://rumpwebstudio.com",
+                "description": "Студия разработки сайтов и веб-приложений. Разработка современных сайтов под ключ, правки и доработка сайтов, продвижение сайта в интернете, SEO оптимизация.",
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://rumpwebstudio.com/?s={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                }
+            }
+        </script>
+
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Service",
+                "serviceType": "Web Development",
+                "provider": {
+                    "@type": "Organization",
+                    "name": "RumpWebstudio"
+                },
+                "areaServed": {
+                    "@type": "Country",
+                    "name": "Russia"
+                },
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "Услуги веб-разработки",
+                    "itemListElement": [
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Web Apps",
+                                "description": "Создание веб приложений под ключ"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Landings",
+                                "description": "Создание лендингов и сайтов-визиток"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Design",
+                                "description": "Разработка уникальных дизайнов"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Backend",
+                                "description": "Создание серверной логики"
+                            }
+                        }
+                    ]
+                }
+            }
+        </script>
+
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "ItemList",
+                "name": "Портфолио проектов",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "item": {
+                            "@type": "CreativeWork",
+                            "name": "TeaToDo",
+                            "description": "Веб-приложение для создания групп вкладок с различными задачами, мыслями, расписанными задачами и цитатами",
+                            "applicationCategory": "WebApplication",
+                            "operatingSystem": "Web"
+                        }
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "item": {
+                            "@type": "WebSite",
+                            "name": "Welbex",
+                            "description": "Веб-сайт для крупного интегратора amoCRM. Крупный лендинг состоящий из 14 блоков, хорошо оптимизированный под любые устройства",
+                            "url": "https://frogiiinotfound.github.io/Welbex/"
+                        }
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "item": {
+                            "@type": "CreativeWork",
+                            "name": "Path Muni",
+                            "description": "Дизайн для сайта посвященному онлайн обучению крипто валюте",
+                            "creativeWorkStatus": "Design"
+                        }
+                    }
+                ]
+            }
+        </script>
+
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Главная",
+                        "item": "https://rumpwebstudio.com/#home"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "О нас",
+                        "item": "https://rumpwebstudio.com/#about"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Проекты",
+                        "item": "https://rumpwebstudio.com/#portfolio"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "name": "Услуги",
+                        "item": "https://rumpwebstudio.com/#services"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 5,
+                        "name": "Контакты",
+                        "item": "https://rumpwebstudio.com/#contacts"
+                    }
+                ]
+            }
+        </script>
     </head>
 
     <body>
