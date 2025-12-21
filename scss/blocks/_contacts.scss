@@ -307,6 +307,20 @@
     }
 }
 
+.error-input {
+    border-color: #f84646;
+    
+    &:focus {
+        border-color: #f84646;
+    }
+}
+
+.input__error {
+    color: #f84646;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
 /* ============================================================================== */
 
 @media (max-width: 1250px) {
