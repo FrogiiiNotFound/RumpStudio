@@ -73,10 +73,13 @@
         border-bottom: 3px solid #fff;
         width: 40px;
         text-align: center;
+        margin: 0 auto;
 
         img {
             width: 21px;
             height: 21px;
+            text-align: center;
+            margin: 0 auto;
         }
     }
 
@@ -100,6 +103,7 @@
         text-align: center;
         padding: 17px 25px;
         background-color: #fff;
+        z-index: 19999;
     }
 
     &__button-text {
