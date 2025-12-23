@@ -334,7 +334,7 @@
 
         &__circle-3 {
             top: 150px;
-            right: 65px;
+            right: 105px;
 
             width: 159px;
             height: 159px;
@@ -359,11 +359,15 @@
         }
 
         &__frame-1 {
-            
+            margin-top: -30px;
         }
 
         &__frame-1 img {
-            width: 179px;
+            width: 159px;
+        }
+
+        &__frame-2 {
+            margin-top: -100px;
         }
 
         &__frame-2 img {

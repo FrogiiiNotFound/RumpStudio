@@ -1,5 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Kameron:700);
-@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:300,regular,500);
 * {
   margin: 0;
   padding: 0;
@@ -642,7 +640,7 @@ select {
   }
   .home__circle-3 {
     top: 150px;
-    right: 65px;
+    right: 105px;
     width: 159px;
     height: 159px;
   }
@@ -660,8 +658,14 @@ select {
   .home__main-image img {
     width: 339px;
   }
+  .home__frame-1 {
+    margin-top: -30px;
+  }
   .home__frame-1 img {
-    width: 179px;
+    width: 159px;
+  }
+  .home__frame-2 {
+    margin-top: -100px;
   }
   .home__frame-2 img {
     width: 179px;

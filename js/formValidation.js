@@ -1,19 +1,27 @@
-const nameInput = document.querySelector(".name-input");
-const nameInputError = document.querySelector(".name-error");
+// Wait for DOM to be ready
+(function() {
+    'use strict';
+    
+    const nameInput = document.querySelector(".name-input");
+    const nameInputError = document.querySelector(".name-error");
 
-const emailInput = document.querySelector(".email-input");
-const emailInputError = document.querySelector(".email-error");
+    const emailInput = document.querySelector(".email-input");
+    const emailInputError = document.querySelector(".email-error");
 
-const messageInput = document.querySelector(".message-input");
-const messageInputError = document.querySelector(".message-error");
+    const messageInput = document.querySelector(".message-input");
+    const messageInputError = document.querySelector(".message-error");
 
-const form = document.querySelector("form");
+    const form = document.querySelector("form");
 
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!nameInput || !emailInput || !messageInput || !form) {
+        return; // Exit if elements not found
+    }
 
-let nameValid = false;
-let emailValid = false;
-let messageValid = false;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    let nameValid = false;
+    let emailValid = false;
+    let messageValid = false;
 
 nameInput.addEventListener("input", (e) => {
     if (e.target.value.length < 2) {
@@ -67,3 +75,4 @@ messageInput.addEventListener("input", (e) => {
 form.addEventListener("submit", (e) => {
     if (!nameValid || !emailValid || !messageValid) e.preventDefault();
 });
+})();

@@ -2,7 +2,24 @@
 <html lang="ru">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+        
+        <!-- Preconnect to external domains for faster resource loading -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+        
+        <!-- DNS prefetch for external resources -->
+        <link rel="dns-prefetch" href="https://api.web3forms.com" />
+        
+        <!-- Preload critical CSS -->
+        <link rel="preload" href="css/main.css" as="style" />
+        
+        <!-- Optimized font loading with font-display swap -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kameron:wght@700&family=Alegreya+Sans:wght@300;400;500&display=swap" media="print" onload="this.media='all'" />
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kameron:wght@700&family=Alegreya+Sans:wght@300;400;500&display=swap" /></noscript>
+        
         <link rel="stylesheet" href="css/main.css" />
         <title>RumpWebstudio - Студия разработки сайтов и веб-приложений</title>
         <meta
@@ -310,7 +327,7 @@
                                 <div class="home__title-wrapper">
                                     <h1 class="home__title animated-text">Turn your ideas into reality</h1>
                                     <div class="home__title-gif">
-                                        <img src="images/home/shine.gif" alt="shine" />
+                                        <img src="images/home/shine.gif" alt="shine" loading="lazy" />
                                     </div>
                                     <div class="home__title-circles">
                                         <div class="home__circle-1"></div>
@@ -324,19 +341,19 @@
                             </div>
                             <div class="home__images">
                                 <div class="home__main-image">
-                                    <img src="images/home/Goose.png" alt="Goose" />
+                                    <img src="images/home/Goose.png" alt="Goose" loading="eager" fetchpriority="high" />
                                 </div>
                                 <div class="home__frame-1">
-                                    <img src="images/home/frame-1.png" alt="frame-1" />
+                                    <img src="images/home/frame-1.png" alt="frame-1" loading="lazy" />
                                 </div>
                                 <div class="home__frame-2">
-                                    <img src="images/home/frame-2.png" alt="frame-2" />
+                                    <img src="images/home/frame-2.png" alt="frame-2" loading="lazy" />
                                 </div>
                                 <div class="home__bg">
-                                    <img src="images/home/bg.png" alt="bg" />
+                                    <img src="images/home/bg.png" alt="bg" loading="lazy" />
                                 </div>
                                 <div class="home__sparkles">
-                                    <img src="images/home/sparkles.png" alt="sparkles" />
+                                    <img src="images/home/sparkles.png" alt="sparkles" loading="lazy" />
                                 </div>
                             </div>
                         </div>
@@ -407,7 +424,7 @@
                             </div>
                         </div>
                         <div class="about__image">
-                            <img src="./images/about/about-image.png" alt="" />
+                            <img src="./images/about/about-image.png" alt="" loading="lazy" />
                         </div>
                     </div>
                 </section>
@@ -452,10 +469,10 @@
                                         </a>
                                         <div class="portfolio__card-decor">
                                             <div class="portfolio__card-decor1">
-                                                <img src="images/projects/card-upper-decor.svg" alt="decor" />
+                                                <img src="images/projects/card-upper-decor.svg" alt="decor" loading="lazy" />
                                             </div>
                                             <div class="portfolio__card-decor2">
-                                                <img src="images/projects/card-lower-decor.svg" alt="decor" />
+                                                <img src="images/projects/card-lower-decor.svg" alt="decor" loading="lazy" />
                                             </div>
                                         </div>
                                     </div>
@@ -493,10 +510,10 @@
                                     </a>
                                     <div class="portfolio__card-decor">
                                         <div class="portfolio__card-decor1-black">
-                                            <img src="images/projects/card-upper-decor-black.svg" alt="decor" />
+                                            <img src="images/projects/card-upper-decor-black.svg" alt="decor" loading="lazy" />
                                         </div>
                                         <div class="portfolio__card-decor2-black">
-                                            <img src="images/projects/card-lower-decor-black.svg" alt="decor" />
+                                            <img src="images/projects/card-lower-decor-black.svg" alt="decor" loading="lazy" />
                                         </div>
                                     </div>
                                 </div>
@@ -571,10 +588,10 @@
                                     </div>
                                     <div class="portfolio__card-decor">
                                         <div class="portfolio__card-decor1-black">
-                                            <img src="images/projects/card-upper-decor-black.svg" alt="decor" />
+                                            <img src="images/projects/card-upper-decor-black.svg" alt="decor" loading="lazy" />
                                         </div>
                                         <div class="portfolio__card-decor2-black">
-                                            <img src="images/projects/card-lower-decor-black.svg" alt="decor" />
+                                            <img src="images/projects/card-lower-decor-black.svg" alt="decor" loading="lazy" />
                                         </div>
                                     </div>
                                 </div>
@@ -884,7 +901,7 @@
                         <div class="footer__columns">
                             <div class="footer__main">
                                 <div class="footer__logo">
-                                    <img src="images/icons/logo-small.png" alt="logo" />
+                                    <img src="images/icons/logo-small.png" alt="logo" loading="lazy" />
                                 </div>
                                 <div class="footer__timeline">
                                     <p class="footer__timeline-title">График работы:</p>
@@ -1158,18 +1175,19 @@
                 </div>
             </footer>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+        <!-- Defer non-critical scripts for better performance -->
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js" defer></script>
 
-        <script src="js/textAnimations.js"></script>
-        <script src="js/parallax.js"></script>
-        <script src="js/menu.js"></script>
-        <script src="js/polyhedron.js"></script>
-        <script src="js/polyhedronAnimation.js"></script>
-        <script src="js/servicesAnimation.js"></script>
-        <script src="js/copyToClipboard.js"></script>
-        <script src="js/formValidation.js"></script>
-        <script src="js/menu2.js"></script>
+        <script src="js/textAnimations.js" defer></script>
+        <script src="js/parallax.js" defer></script>
+        <script src="js/menu.js" defer></script>
+        <script src="js/polyhedron.js" defer></script>
+        <script src="js/polyhedronAnimation.js" defer></script>
+        <script src="js/servicesAnimation.js" defer></script>
+        <script src="js/copyToClipboard.js" defer></script>
+        <script src="js/formValidation.js" defer></script>
+        <script src="js/menu2.js" defer></script>
     </body>
 </html>
