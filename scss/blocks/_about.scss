@@ -11,11 +11,15 @@
 
     &__text {
         font-weight: 400;
-        font-size: 28px;
+        font-size: 24px;
         line-height: 139%;
         color: #171717;
         max-width: 636px;
-        margin-bottom: 50px;
+        margin-bottom: 20px;
+
+        &:last-child {
+            margin-bottom: 50px !important;
+        }
     }
 
     &__content {
@@ -59,11 +63,50 @@
         color: #171717;
     }
 
+    &__button-wrapper {
+        display: inline-block;
+    }
+
     &__button {
+        cursor: pointer;
+        position: relative;
         display: inline-block;
         border-radius: 5px;
         background-color: #171717;
         padding: 17px 60px;
+        overflow: hidden;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.4),
+                rgba(255, 255, 255, 0.8),
+                transparent
+            );
+            transition: left 0.7s ease;
+        }
+
+        &:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.2), 0 0 25px rgba(0, 0, 0, 0.4);
+
+            &::before {
+                left: 100%;
+                transition: left 0.7s ease;
+            }
+        }
+
+        &:active {
+            transform: translateY(-2px) scale(1.01);
+            transition-duration: 0.1s;
+        }
     }
 
     &__link {

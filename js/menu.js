@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const navigationConfig = {
         home__item1: { target: "home", offset: 120 },
-        home__item2: { target: "about-us", offset: 0 },
+        home__item2: { target: "about", offset: 0 },
         home__item3: { target: "portfolio", offset: 0 },
         home__item4: { target: "services", offset: 0 },
         home__item5: { target: "contacts", offset: 50 },

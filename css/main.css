@@ -177,7 +177,7 @@ select {
   background-color: #171717;
 }
 .title__text {
-  font-weight: 500;
+  font-weight: 500 !important;
   font-size: 48px;
   text-align: center;
   color: #171717;
@@ -1476,7 +1476,7 @@ select {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("../../images/projects/project3.png") 0 0/cover no-repeat;
+  background: url("../../images/projects/project2.png") 0 0/cover no-repeat;
   opacity: 0;
   -webkit-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
@@ -1489,7 +1489,7 @@ select {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("../../images/projects/project2.png") 0 0/cover no-repeat;
+  background: url("../../images/projects/project3.png") 0 0/cover no-repeat;
   opacity: 0;
   -webkit-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
@@ -2115,11 +2115,14 @@ select {
 }
 .about__text {
   font-weight: 400;
-  font-size: 28px;
+  font-size: 24px;
   line-height: 139%;
   color: #171717;
   max-width: 636px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
+}
+.about__text:last-child {
+  margin-bottom: 50px !important;
 }
 .about__content {
   display: -webkit-box;
@@ -2167,11 +2170,46 @@ select {
   line-height: 100%;
   color: #171717;
 }
+.about__button-wrapper {
+  display: inline-block;
+}
 .about__button {
+  cursor: pointer;
+  position: relative;
   display: inline-block;
   border-radius: 5px;
   background-color: #171717;
   padding: 17px 60px;
+  overflow: hidden;
+}
+.about__button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(rgba(255, 255, 255, 0.4)), color-stop(rgba(255, 255, 255, 0.8)), to(transparent));
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.8), transparent);
+  -webkit-transition: left 0.7s ease;
+  transition: left 0.7s ease;
+}
+.about__button:hover {
+  -webkit-transform: translateY(-8px) scale(1.02);
+          transform: translateY(-8px) scale(1.02);
+  -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.2), 0 0 25px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.2), 0 0 25px rgba(0, 0, 0, 0.4);
+}
+.about__button:hover::before {
+  left: 100%;
+  -webkit-transition: left 0.7s ease;
+  transition: left 0.7s ease;
+}
+.about__button:active {
+  -webkit-transform: translateY(-2px) scale(1.01);
+          transform: translateY(-2px) scale(1.01);
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
 }
 .about__link {
   font-weight: 500;
